@@ -1,0 +1,42 @@
+{
+  "name": "MFS-quiz",
+  "version": "1.0.0",
+  "description": "Motherland: Fort Salem specialization quiz made by me and the leaders of the MFS Research Institute",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamjon94/MFS-quiz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamjon94/MFS-quiz/issues"
+  },
+  "homepage": "https://github.com/jamjon94/MFS-quiz#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "build": "^0.1.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.7",
+    "path": "^0.12.7",
+    "prop-types": "^15.7.2",
+    "react-carousel-dots": "^0.1.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
