@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 function Result(props) {
   return (
     <div className="results-container">
-      <h2 className="results-section">
+      <h3 className="results-section">
         You are a <strong>{props.quizResult}</strong>!
-      </h2>
+      </h3>
     </div>
   );
 }
