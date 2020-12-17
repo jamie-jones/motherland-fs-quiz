@@ -33,3 +33,5 @@ const Blaster = ({title, content}) => {
         </div>
     )
 }
+
+export {Fixer, Necro, Knower, Blaster}
