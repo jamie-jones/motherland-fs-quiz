@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 
 class Specializations extends Component {
-    render() {
+    renderFixer() {
         return (
             <div>
                 
