@@ -125,7 +125,9 @@ class App extends Component {
           <br/> Specialization Quiz</h1>
           <br/>
           <h5 className="intro-text">
-            Find out where you belong in this witch's Army!</h5>
+            Find out where you belong in this witch's Army!
+            </h5>
+            <br/>
         </section>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </main>

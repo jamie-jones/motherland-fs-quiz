@@ -17,7 +17,7 @@ function AnswerOption(props) {
   }
   
   return (
-    <div>
+    <div className="answers-section">
       <input
         type="radio"
         className="btn-check radioCustomButton"

@@ -1,10 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Result(props) {
   return (
-    <div className="result">
-      You prefer <strong>{props.quizResult}</strong>!
+    <div className="results-container">
+      <h2 className="results-section">
+        You are a <strong>{props.quizResult}</strong>!
+      </h2>
     </div>
   );
 }
