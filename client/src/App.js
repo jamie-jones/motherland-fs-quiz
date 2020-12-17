@@ -120,7 +120,7 @@ class App extends Component {
   render() {
     return (
       <main className="content">
-        <section>
+        <section className="quiz">
           <h1 className="quiz-title">Motherland: Fort Salem
           <br/> Specialization Quiz</h1>
           <br/>

@@ -25,6 +25,9 @@ body {
   color: white;
 }
 
+.answers-section {
+}
+
 .answers-btn {
   width: 48.5%;
   height: 75px;
@@ -32,12 +35,13 @@ body {
   text-align: center;
 }
 
-/* .questions {
-  height: 100px;
-  padding-top: 10px;
-  background-color: rgb(100, 13, 29);
-  background-position: center;
-} */
+.quiz {
+  align-content: center;
+}
+
+.question, .question-count {
+  text-align: center;
+}
 
 button{
     width: 48.5%;
