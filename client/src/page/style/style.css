@@ -1,0 +1,42 @@
+ul.no-bullets{
+  list-style-type: none;
+}
+
+.content {
+  padding-top: 50px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding-top: 20px;
+  width: 550px;
+  /* height: 400px; */
+  background-color: rgb(204, 195, 198, 0.7);
+  text-align: center;
+}
+
+h3, button, .quiz-title {
+  font-family: "Langar", cursive;
+}
+
+.row {
+  align-content: center;
+}
+
+.quiz-container {
+  margin: auto;
+}
+
+.questions {
+  height: 100px;
+  padding-top: 10px;
+  background-color: rgb(100, 13, 29);
+  background-position: center;
+}
+
+button{
+    width: 48.5%;
+    height: 100px;
+    margin: 3px;
+}
