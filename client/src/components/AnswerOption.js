@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// this function shows the answer options
 function AnswerOption(props) {
 
   function renderAnswerOptions(key) {
@@ -16,12 +17,15 @@ function AnswerOption(props) {
     );
   }
   
+  // here, we return the answers to choose from as radio buttons and label
   return (
     <div className="answers-section">
       <input
         type="radio"
         className="btn-check radioCustomButton"
         name="radioGroup"
+        // this property is a comparison statement.
+        // It will be a boolean based on whether the answer selected is equal to the answer option type
         checked={props.answerType === props.answer}
         id={props.answerType}
         value={props.answerType}
