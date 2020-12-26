@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import "./index.css";
 import "./App.css";
 import RILogo from "./assets/MFSRI-logo.png";
+import LogoWhite from "./assets/MFSRI_logo_white.png";
 
 class App extends Component {
   constructor(props) {
@@ -164,7 +165,7 @@ class App extends Component {
           </h5>
           <br />
           <article id="logo">
-          <img id="ri-logo" src={RILogo} alt="MFSRI Logo" />
+          <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
           <p id="created-by">
             Created by: <br /> MFSRI <br /> IT Dep
           </p>

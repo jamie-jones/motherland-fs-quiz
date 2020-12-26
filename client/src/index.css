@@ -66,9 +66,9 @@ body {
 }
 
 #logo {
-  right: 0;
-  padding-top: 400px;
-  padding-right: 15px;
+  bottom:0;
+  right:0;
+  padding-right: 5px;
   position: absolute;
 }
 
@@ -118,9 +118,9 @@ body {
   }
 
   #logo {
-    right: 0;
-    padding-top: 660px;
-    padding-right: 15px;
+    bottom:0;
+    right:0;
+    padding-right: 5px;
     position: absolute;
   }
 }
@@ -168,8 +168,8 @@ body {
   
     #logo {
       right: 0;
-      padding-top: 470px;
-      padding-right: 15px;
+      bottom:0;
+      padding-right: 5px;
       position: absolute;
     }
 }
@@ -220,9 +220,9 @@ body {
     }
   
     #logo {
-      right: 0;
-      padding-top: 350px;
-      padding-right: 15px;
+      bottom:0;
+      right:0;
+      padding-right: 5px;
       position: absolute;
     }
 }
