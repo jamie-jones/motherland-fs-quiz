@@ -1,31 +1,23 @@
 
-const Fixer = "Fixer"
-// console.log(Fixer.title);
-
-const Necro = "Necro"
-
-const Blaster = "Blaster"
-
-const Knower = "Knower"
 
 const quizQuestions = [
   {
     question: "Question One",
     answers: [
       {
-        type: Necro,
+        type: "Necro",
         content: "necro answer",
       },
       {
-        type: Fixer,
+        type: "Fixer",
         content: "fixer answer",
       },
       {
-        type: Blaster,
+        type: "Blaster",
         content: "blaster answer",
       },
       {
-        type: Knower,
+        type: "Knower",
         content: "knower answer",
       },
     ],
@@ -34,19 +26,19 @@ const quizQuestions = [
     question: "Question Two",
     answers: [
       {
-        type: Necro,
+        type: "Necro",
         content: "necro answer",
       },
       {
-        type: Fixer,
+        type: "Fixer",
         content: "fixer answer",
       },
       {
-        type: Blaster,
+        type: "Blaster",
         content: "blaster answer",
       },
       {
-        type: Knower,
+        type: "Knower",
         content: "knower answer",
       },
     ],
@@ -55,19 +47,19 @@ const quizQuestions = [
     question: "Question Three",
     answers: [
       {
-        type: Necro,
+        type: "Necro",
         content: "necro answer",
       },
       {
-        type: Fixer,
+        type: "Fixer",
         content: "fixer answer",
       },
       {
-        type: Blaster,
+        type: "Blaster",
         content: "blaster answer",
       },
       {
-        type: Knower,
+        type: "Knower",
         content: "knower answer",
       },
     ],
@@ -76,19 +68,19 @@ const quizQuestions = [
     question: "Question Four",
     answers: [
       {
-        type: Necro,
+        type: "Necro",
         content: "necro answer",
       },
       {
-        type: Fixer,
+        type: "Fixer",
         content: "fixer answer",
       },
       {
-        type: Blaster,
+        type: "Blaster",
         content: "blaster answer",
       },
       {
-        type: Knower,
+        type: "Knower",
         content: "knower answer",
       },
     ],
