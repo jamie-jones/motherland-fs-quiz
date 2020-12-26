@@ -38,7 +38,8 @@ function Result(props) {
     return(
      <div className="results-container">
        <div className="results-section">
-        <h1>You got {props.quizResult}</h1>
+        <h1>You got {props.quizResult}!</h1>
+        <img className="photo" src={NecroBadge} alt="NecroBadge"/>
         <h5>Necro People: Scylla Ramshorn, Izadora</h5>
        </div>
      </div>
@@ -47,7 +48,8 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}</h1>
+       <h1>You got {props.quizResult}!</h1>
+       <img className="photo" src={FixerBadge} alt="FixerBadge"/>
        <h5>Fixer People: Raelle Collar, Willa Collar</h5>
       </div>
     </div>
@@ -56,7 +58,8 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}</h1>
+       <h1>You got {props.quizResult}!</h1>
+       <img className="photo" src={BlasterBadge} alt="BlasterBadge"/>
        <h5>Blaster People: Abigail Bellweather, Libba Swythe</h5>
       </div>
     </div>
@@ -65,7 +68,8 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}</h1>
+       <h1>You got {props.quizResult}!</h1>
+       <img className="photo" src={KnowerBadge} alt="KnowerBadge"/>
        <h5>Knower People: Tally Craven</h5>
       </div>
     </div>

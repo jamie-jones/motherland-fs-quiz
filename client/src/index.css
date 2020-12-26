@@ -57,3 +57,8 @@ text-align: center;
   background-color: rgb(204, 195, 198, 0.7);
   text-align: center;
 }
+
+.photo{
+  width: 300px;
+  height: auto;
+}
