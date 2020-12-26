@@ -166,7 +166,7 @@ class App extends Component {
           <article id="logo">
           <img id="ri-logo" src={RILogo} alt="MFSRI Logo" />
           <p id="created-by">
-            Created by: <br /> MFSRI
+            Created by: <br /> MFSRI <br /> IT Dep
           </p>
         </article>
         </section>

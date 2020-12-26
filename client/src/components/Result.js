@@ -38,7 +38,7 @@ function Result(props) {
     return(
      <div className="results-container">
        <div className="results-section">
-        <h1>You got {props.quizResult}!</h1>
+        <h1 className="you-got">You got {props.quizResult}!</h1>
         <img className="photo" src={NecroBadge} alt="NecroBadge"/>
         <br/>
         <br/>
@@ -50,7 +50,7 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}!</h1>
+       <h1 className="you-got">You got {props.quizResult}!</h1>
        <img className="photo" src={FixerBadge} alt="FixerBadge"/>
        <br/>
         <br/>
@@ -62,7 +62,7 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}!</h1>
+       <h1 className="you-got">You got {props.quizResult}!</h1>
        <img className="photo" src={BlasterBadge} alt="BlasterBadge"/>
        <br/>
         <br/>
@@ -74,7 +74,7 @@ function Result(props) {
     return(
       <div className="results-container">
       <div className="results-section">
-       <h1>You got {props.quizResult}!</h1>
+       <h1 className="you-got">You got {props.quizResult}!</h1>
        <img className="photo" src={KnowerBadge} alt="KnowerBadge"/>
        <br/>
         <br/>

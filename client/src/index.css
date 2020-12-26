@@ -83,3 +83,146 @@ body {
   text-align: center;
   color: rgba(255, 255, 255, .4);
 }
+
+@media only screen and (max-width: 768px) {
+  body{
+  background-image: url(./assets/mobile-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  }
+
+  .container {
+    width: 600px;
+    height: 600px;
+  }
+
+  .answers-btn {
+    width: 65%;
+    height: 100px;
+  }
+
+  .results-section {
+    width: 600px;
+    height: 600px;
+  }
+
+  .photo {
+    width: 450px;
+    height: auto;
+  }
+
+  .quiz-title{
+    font-size: 60px;
+  }
+
+  #logo {
+    right: 0;
+    padding-top: 660px;
+    padding-right: 15px;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body{
+    background-image: url(./assets/background-image-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    }
+
+    .content {
+      padding-top: 50px;
+    }
+  
+    .container {
+      width: 300px;
+      height: 500px;
+    }
+  
+    .answers-btn {
+      width: 75%;
+      height: 80px;
+    }
+
+    .you-got {
+      font-size: 30px;
+    }
+  
+    .results-section {
+       width: 300px;
+      height: 500px;
+    }
+  
+    .photo {
+      width: 250px;
+      height: auto;
+    }
+  
+    .quiz-title{
+      font-size: 33px;
+    }
+  
+    #logo {
+      right: 0;
+      padding-top: 470px;
+      padding-right: 15px;
+      position: absolute;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+  body{
+    background-image: url(./assets/background-image-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    }
+
+    .content {
+      padding-top: 30px;
+    }
+  
+    .container {
+      width: 300px;
+      height: 400px;
+    }
+  
+    .answers-btn {
+      width: 75%;
+      height: 65px;
+    }
+
+    .you-got {
+      font-size: 30px;
+    }
+  
+    .results-section {
+       width: 300px;
+      height: 400px;
+    }
+  
+    .photo {
+      width: 250px;
+      height: auto;
+    }
+  
+    .quiz-title{
+      font-size: 30px;
+    }
+
+    #intro-text {
+      font-size: 16px;
+    }
+  
+    #logo {
+      right: 0;
+      padding-top: 350px;
+      padding-right: 15px;
+      position: absolute;
+    }
+}
