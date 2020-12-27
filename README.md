@@ -10,3 +10,7 @@ The characters and specializations are all created by the makers of Motherland: 
 Background image: https://fanart.tv/fanart/tv/364047/tvposter/motherland-fort-salem-5e76aea3368a1.jpg / https://fanart.tv/series/364047/motherland-fort-salem/
 
 GoogleFonts was used. Bootstrap was used. React and Node are all used. Prop-types was used: This is used to document the intended types of properties to components.
+
+react-copy-to-clipboard library was used
+
+fontAwesome was used for the share icon

@@ -65,6 +65,10 @@ body {
   height: auto;
 }
 
+.share{
+  color: black;
+}
+
 #logo {
   bottom:0;
   right:0;
