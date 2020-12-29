@@ -4,7 +4,7 @@ import Quiz from "./components/Quiz";
 import React, { Component } from "react";
 import "./index.css";
 import "./App.css";
-import RILogo from "./assets/MFSRI-logo.png";
+import TieBreaker from "./components/tieBreaker/TieBreaker"
 import LogoWhite from "./assets/MFSRI_logo_white.png";
 
 class App extends Component {
@@ -122,11 +122,14 @@ class App extends Component {
 
   setResults(result) {
     // if the result for maxAnswerCount is only one answer type...
+    console.log(result.length)
     if (result.length === 1) {
       // the result will be set
       this.setState({ result: result[0] });
       // but if the result is more than one answer type...
     } else {
+      console.log("tie-breaker")
+      // this.renderTieBreaker()
       // we are given an "undetermined" result
       this.setState({ result: result[0] });
     }
@@ -142,6 +145,19 @@ class App extends Component {
         question={this.state.question}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
+      />
+    );
+  }
+
+  renderTieBreaker() {
+    console.log("this is a tie breaker")
+    return (
+      <TieBreaker
+      answer={this.state.answer}
+      tbAnswers={this.state.tbAnswers}
+      questionId={this.state.questionId}
+      question={this.state.question}
+      onAnswerSelected={this.handleAnswerSelected}
       />
     );
   }
@@ -172,6 +188,7 @@ class App extends Component {
         </article>
         </section>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
+        {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
       </main>
     );
   }

@@ -4,7 +4,6 @@ import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from '../components/AnswerOption';
 
-// 
 function Quiz(props) {
   // this function returns the answer options component. The properties are defined in App.js
     function renderAnswerOptions(key) {

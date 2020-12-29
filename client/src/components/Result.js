@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import URLCopy from "./URLCopy";
 import PropTypes from "prop-types";
 import BlasterBadge from "../assets/blaster.png";
 import NecroBadge from "../assets/necro.png";
