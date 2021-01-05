@@ -1,6 +1,6 @@
 const tieBreakerQues = [
     {
-        questions: "Tie Breaker Question",
+        question: "Tie Breaker Question",
         answers: [
             {
                 type: "Necro",

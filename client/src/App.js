@@ -1,5 +1,6 @@
 import Result from "./components/Result";
 import quizQuestions from "./api/quizQuestions";
+import tieBreakerQues from "./api/tieBreakerQues";
 import Quiz from "./components/Quiz";
 import React, { Component } from "react";
 import "./index.css";
@@ -32,11 +33,16 @@ class App extends Component {
     const shuffledAnswerOptions = quizQuestions.map((question) =>
       this.shuffleArray(question.answers)
     );
+    const tbAnswerOp = tieBreakerQues.map((question) =>
+    this.shuffleArray(question.answers)
+    )
 
     // this setState will see the updated state and it will be executed only once despite the state change
     this.setState({
       question: quizQuestions[0].question,
+      tbQuestion: tieBreakerQues[0].question,
       answerOptions: shuffledAnswerOptions[0],
+      tbAnswerOptions: tbAnswerOp[0]
     });
   }
 
@@ -129,9 +135,12 @@ class App extends Component {
       // but if the result is more than one answer type...
     } else {
       console.log("tie-breaker")
-      // this.renderTieBreaker()
+      // this.render(
+      //   <h1>Hello</h1>
+      // )
+      this.renderTieBreaker()
       // we are given an "undetermined" result
-      this.setState({ result: result[0] });
+      // renderTieBreaker()
     }
   }
 
@@ -153,11 +162,12 @@ class App extends Component {
     console.log("this is a tie breaker")
     return (
       <TieBreaker
-      answer={this.state.answer}
-      tbAnswers={this.state.tbAnswers}
-      questionId={this.state.questionId}
-      question={this.state.question}
-      onAnswerSelected={this.handleAnswerSelected}
+      // answer={this.state.answer}
+      // answerOptions={this.state.answerOptions}
+      // questionId={this.state.questionId}
+      // tbQuestion={this.state.tbQuestion}
+      // questionTotal={tieBreakerQues.length}
+      // onAnswerSelected={this.handleAnswerSelected}
       />
     );
   }
@@ -187,11 +197,13 @@ class App extends Component {
           </p>
         </article>
         </section>
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
-        {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
+        {this.state.result ? this.renderTieBreaker() : this.renderQuiz()}
       </main>
     );
   }
 }
 
+// {this.state.result.length > 1 ?  }
+
+// {this.state.result ? this.renderResult() : this.renderQuiz()}
 export default App;
