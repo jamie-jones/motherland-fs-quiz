@@ -4,19 +4,19 @@ const tieBreakerQues = [
         answers: [
             {
                 type: "Necro",
-                content: "Necro answer"
+                content: "Necro toe breaker answer"
             },
             {
                 type: "Fixer",
-                content: "Fixer answer"
+                content: "Fixer tie breaker answer"
             },
             {
                 type: "Blaster",
-                content: "Blaster answer"
+                content: "Blaster tie breaker answer"
             },
             {
                 type: "Knower",
-                content: "Knower answer"
+                content: "Knower tie breaker answer"
             }
         ]
     }

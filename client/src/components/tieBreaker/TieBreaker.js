@@ -18,17 +18,17 @@ function TieBreaker(props) {
     }
     return (
         <div>
-            <TBQues content={console.log(props.tbQuestion)} />
-            <ul className="answerOptions">
-                <h2>questions</h2>
-            </ul>
+            <TBQues content={props.tbQuestion} />
+            <div className="answerOptions">
+                {props.tbAnswerOptions.map(renderTBAnswerOptions)}
+            </div>
         </div>
     )
 }
 
 TieBreaker.propTypes = {
     answer: PropTypes.string.isRequired,
-    answerOptions: PropTypes.array.isRequired,
+    tbAnswerOptions: PropTypes.array.isRequired,
     tbQuestion: PropTypes.string.isRequired,
     questionId: PropTypes.number.isRequired,
     questionTotal: PropTypes.number.isRequired,

@@ -162,12 +162,12 @@ class App extends Component {
     console.log("this is a tie breaker")
     return (
       <TieBreaker
-      // answer={this.state.answer}
-      // answerOptions={this.state.answerOptions}
-      // questionId={this.state.questionId}
-      // tbQuestion={this.state.tbQuestion}
-      // questionTotal={tieBreakerQues.length}
-      // onAnswerSelected={this.handleAnswerSelected}
+      answer={this.state.answer}
+      tbAnswerOptions={this.state.tbAnswerOptions}
+      questionId={this.state.questionId}
+      tbQuestion={this.state.tbQuestion}
+      questionTotal={tieBreakerQues.length}
+      onAnswerSelected={this.handleAnswerSelected}
       />
     );
   }
@@ -197,13 +197,12 @@ class App extends Component {
           </p>
         </article>
         </section>
-        {this.state.result ? this.renderTieBreaker() : this.renderQuiz()}
+        {this.state.result ? this.renderTieBreaker() || this.renderResult()  : this.renderQuiz()}
+        {/* {this.state.result ? this.renderResult() : this.renderQuiz()} */}
       </main>
     );
   }
 }
-
+// this.state.result ? this.renderResult() : this.renderQuiz()
 // {this.state.result.length > 1 ?  }
-
-// {this.state.result ? this.renderResult() : this.renderQuiz()}
 export default App;
