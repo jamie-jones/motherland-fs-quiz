@@ -8,6 +8,9 @@ import "./App.css";
 import TieBreaker from "./components/tieBreaker/TieBreaker"
 import LogoWhite from "./assets/MFSRI_logo_white.png";
 
+let currentStat = 1
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -130,15 +133,18 @@ class App extends Component {
     // if the result for maxAnswerCount is only one answer type...
     console.log(result.length)
     if (result.length === 1) {
+      currentStat = 3
       // the result will be set
       this.setState({ result: result[0] });
       // but if the result is more than one answer type...
     } else {
+      currentStat = 2
+      this.setState({result: "poop"})
       console.log("tie-breaker")
       // this.render(
       //   <h1>Hello</h1>
       // )
-      this.renderTieBreaker()
+      // this.renderTieBreaker()
       // we are given an "undetermined" result
       // renderTieBreaker()
     }
@@ -176,6 +182,7 @@ class App extends Component {
     return <Result quizResult={this.state.result} />;
   }
 
+
   // here, we render the first things being displayed (the welcome and the beginning on the quiz)
   render() {
     return (
@@ -197,8 +204,12 @@ class App extends Component {
           </p>
         </article>
         </section>
-        {this.state.result ? this.renderTieBreaker() || this.renderResult()  : this.renderQuiz()}
-        {/* {this.state.result ? this.renderResult() : this.renderQuiz()} */}
+        {currentStat === 1 ? this.renderQuiz() : console.log("it's not 1")}
+        {currentStat === 2 ? this.renderTieBreaker() : console.log("it's not 2")}
+        {currentStat === 3 ? this.renderResult() : console.log("it's not 3")}
+        
+        {/* {!this.state.result && noTieYet ? this.renderQuiz() : console.log(this.state.result)} */}
+        {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
       </main>
     );
   }
