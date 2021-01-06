@@ -231,7 +231,7 @@ class App extends Component {
     return (
       <TieBreaker
         tbAnswer={this.state.answer}
-        tbAnswerOptions={this.state.tbAnswerOptions}
+        tbAnswerOptions={filteredOptions}
         tbQuestionId={this.state.tbQuestionId}
         tbQuestion={this.state.tbQuestion}
         tbQuestionTotal={tieBreakerQues.length}
