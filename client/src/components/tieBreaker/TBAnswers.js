@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function TBAnswers(props) {
+  
   function renderTBAnswers(key) {
     return (
       <TBAnswers
@@ -29,8 +30,7 @@ function TBAnswers(props) {
         disabled={props.answer}
         onChange={props.onAnswerSelected}
       />
-      <label className="btn btn-secondary radioCustomLabel answers-btn" htmlFor={props.answerType}
-      >
+      <label className="btn btn-secondary radioCustomLabel answers-btn" htmlFor={props.answerType}>      >
         {props.answerContent}
       </label>
     </div>

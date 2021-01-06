@@ -25,6 +25,13 @@ class App extends Component {
       answer: "",
       answersCount: {},
       result: "",
+      tbQuestionId: 1,
+      tbQuestion: "",
+      tbAnswerOptions: [],
+      tbAnswer: "",
+      tbAnswersCount: {},
+      tbResult: ""
+
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -72,6 +79,7 @@ class App extends Component {
 
   // this function does two things...
   handleAnswerSelected(event) {
+    console.log("hand le answer")
     // sets the answer...
     this.setUserAnswer(event.currentTarget.value);
     // and if the questionId is less than the question length...
@@ -103,6 +111,7 @@ class App extends Component {
     // variables for incrementing the counter and questionId
     const counter = this.state.counter + 1;
     const questionId = this.state.questionId + 1;
+    const tbQuestionId = this.state.tbQuestionId + 1;
     // assigning new variables through setState
     this.setState({
       counter: counter,
@@ -110,6 +119,11 @@ class App extends Component {
       question: quizQuestions[counter].question,
       answerOptions: quizQuestions[counter].answers,
       answer: "",
+      tbQuestionId: tbQuestionId,
+      // tbQuestion: tieBreakerQues[counter].question,
+      // tbAnswerOptions: tieBreakerQues[counter].answers,
+      tbAnswer: ""
+      
     });
   }
 
@@ -168,11 +182,11 @@ class App extends Component {
     console.log("this is a tie breaker")
     return (
       <TieBreaker
-      answer={this.state.answer}
+      tbAnswer={this.state.answer}
       tbAnswerOptions={this.state.tbAnswerOptions}
-      questionId={this.state.questionId}
+      tbQuestionId={this.state.tbQuestionId}
       tbQuestion={this.state.tbQuestion}
-      questionTotal={tieBreakerQues.length}
+      tbQuestionTotal={tieBreakerQues.length}
       onAnswerSelected={this.handleAnswerSelected}
       />
     );

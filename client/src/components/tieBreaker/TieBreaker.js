@@ -11,18 +11,20 @@ function TieBreaker(props) {
             answerContent={key.content}
             answerType={key.type}
             answer={props.answer}
-            questionId={props.questionId}
+            tbQuestionId={props.tbQuestionId}
             onAnswerSelected={props.onAnswerSelected}
             />
         )
     }
     return (
-        <div>
+        <main className="container">
+            <div className="quiz">
             <TBQues content={props.tbQuestion} />
             <div className="answerOptions">
                 {props.tbAnswerOptions.map(renderTBAnswerOptions)}
             </div>
-        </div>
+            </div>
+        </main>
     )
 }
 
@@ -30,7 +32,7 @@ TieBreaker.propTypes = {
     answer: PropTypes.string.isRequired,
     tbAnswerOptions: PropTypes.array.isRequired,
     tbQuestion: PropTypes.string.isRequired,
-    questionId: PropTypes.number.isRequired,
+    tbQuestionId: PropTypes.number.isRequired,
     questionTotal: PropTypes.number.isRequired,
     onAnswerSelected: PropTypes.func.isRequired
 }
