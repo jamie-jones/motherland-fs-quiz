@@ -33,7 +33,7 @@ TieBreaker.propTypes = {
     tbAnswerOptions: PropTypes.array.isRequired,
     tbQuestion: PropTypes.string.isRequired,
     tbQuestionId: PropTypes.number.isRequired,
-    questionTotal: PropTypes.number.isRequired,
+    tbQuestionTotal: PropTypes.number.isRequired,
     onAnswerSelected: PropTypes.func.isRequired
 }
 

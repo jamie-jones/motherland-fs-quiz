@@ -5,11 +5,11 @@ import Quiz from "./components/Quiz";
 import React, { Component } from "react";
 import "./index.css";
 import "./App.css";
-import TieBreaker from "./components/tieBreaker/TieBreaker"
+import TieBreaker from "./components/tieBreaker/TieBreaker";
 import LogoWhite from "./assets/MFSRI_logo_white.png";
 
-let currentStat = 1
-
+let currentStat = 1;
+var resultStorage = []
 
 class App extends Component {
   constructor(props) {
@@ -30,8 +30,7 @@ class App extends Component {
       tbAnswerOptions: [],
       tbAnswer: "",
       tbAnswersCount: {},
-      tbResult: ""
-
+      tbResult: "",
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -44,16 +43,17 @@ class App extends Component {
       this.shuffleArray(question.answers)
     );
     const tbAnswerOp = tieBreakerQues.map((question) =>
-    this.shuffleArray(question.answers)
-    )
+      this.shuffleArray(question.answers)
+    );
 
     // this setState will see the updated state and it will be executed only once despite the state change
     this.setState({
       question: quizQuestions[0].question,
       tbQuestion: tieBreakerQues[0].question,
       answerOptions: shuffledAnswerOptions[0],
-      tbAnswerOptions: tbAnswerOp[0]
+      tbAnswerOptions: tbAnswerOp[0],
     });
+    // console.log(this.tbAnswerOptions)
   }
 
   // this function actually shuffle the array
@@ -77,9 +77,36 @@ class App extends Component {
     return array;
   }
 
+  // create an empty array filteredArray
+  // filteredArray(array) {
+  //   var tiedResults = [];
+  //   // take values from the max to see which types are tied
+  //   var maxedResults = this.getResults();
+  //   console.log(maxedResults);
+  //   // put those values in a tied array
+  //   for (var i = 0; i < 4; i++) {
+  //     if (array[0] == maxedResults) {
+  //       tiedResults.push(...maxedResults);
+  //     }
+  //   }
+
+  //   return tiedResults;
+  // }
+  // take the parameter (array)
+
+  // for (0 - 3) {
+  // if Parameters(0).type is in tied, add parameter (0) to filteredArray
+  // }
+
+  // make filterArray function (array) with if else.
+  // similar to shuffleArray
+  // so that if an answer is not of the highest result,
+  // then it is not thrown away and if it is, then the
+  // question with the answer type is kept in to show
+
   // this function does two things...
   handleAnswerSelected(event) {
-    console.log("hand le answer")
+    console.log("hand le answer");
     // sets the answer...
     this.setUserAnswer(event.currentTarget.value);
     // and if the questionId is less than the question length...
@@ -121,10 +148,10 @@ class App extends Component {
       answer: "",
       tbQuestionId: tbQuestionId,
       // tbQuestion: tieBreakerQues[counter].question,
-      // tbAnswerOptions: tieBreakerQues[counter].answers,
-      tbAnswer: ""
-      
+      // tbAnswerOptions: tieBreakerQues[0].answers,
+      tbAnswer: "",
     });
+    // console.log(tbAnswerOptions)
   }
 
   // function for calculating whish answer type has the highest number
@@ -144,20 +171,30 @@ class App extends Component {
   }
 
   setResults(result) {
+    resultStorage = result
+    // const tbAnswerOp = "poofnav"
+    // if (currentStat == 2) {
+    //  return tbAnswerOp = tieBreakerQues.map((question) =>
+    //   this.filteredArray(question.answers)
+    // );
+    // }
+
+    // this.setState({
+    //   tbQuestion: tieBreakerQues[0].question,
+    //   tbAnswerOptions: tbAnswerOp[0],
+    // });
     // if the result for maxAnswerCount is only one answer type...
-    console.log(result.length)
+    console.log(result.length);
     if (result.length === 1) {
-      currentStat = 3
+      currentStat = 3;
       // the result will be set
       this.setState({ result: result[0] });
       // but if the result is more than one answer type...
     } else {
-      currentStat = 2
-      this.setState({result: "poop"})
-      console.log("tie-breaker")
-      // this.render(
-      //   <h1>Hello</h1>
-      // )
+      currentStat = 2;
+      this.setState({ result: "poop" });
+      console.log("tie-breaker");
+      
       // this.renderTieBreaker()
       // we are given an "undetermined" result
       // renderTieBreaker()
@@ -179,23 +216,34 @@ class App extends Component {
   }
 
   renderTieBreaker() {
-    console.log("this is a tie breaker")
+    var tiedResults = []
+    var filteredOptions = []
+    for (var i = 0; i < 4; i++) {
+      if (this.state.tbAnswerOptions[i].type === resultStorage[0]){
+        filteredOptions[i] = this.state.tbAnswerOptions[i]
+      }
+    }
+    console.log("this is a tie breaker");
+    // this.state.tbAnswerOptions.filter(() => this.answers[0])
+    console.log(resultStorage)
+    console.log(this.state.tbAnswerOptions)
+    console.log(filteredOptions)
     return (
       <TieBreaker
-      tbAnswer={this.state.answer}
-      tbAnswerOptions={this.state.tbAnswerOptions}
-      tbQuestionId={this.state.tbQuestionId}
-      tbQuestion={this.state.tbQuestion}
-      tbQuestionTotal={tieBreakerQues.length}
-      onAnswerSelected={this.handleAnswerSelected}
+        tbAnswer={this.state.answer}
+        tbAnswerOptions={this.state.tbAnswerOptions}
+        tbQuestionId={this.state.tbQuestionId}
+        tbQuestion={this.state.tbQuestion}
+        tbQuestionTotal={tieBreakerQues.length}
+        onAnswerSelected={this.handleAnswerSelected}
       />
     );
   }
+  
 
   renderResult() {
     return <Result quizResult={this.state.result} />;
   }
-
 
   // here, we render the first things being displayed (the welcome and the beginning on the quiz)
   render() {
@@ -212,16 +260,18 @@ class App extends Component {
           </h5>
           <br />
           <article id="logo">
-          <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
-          <p id="created-by">
-            Created by: <br /> MFSRI <br /> IT Dep
-          </p>
-        </article>
+            <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
+            <p id="created-by">
+              Created by: <br /> MFSRI <br /> IT Dep
+            </p>
+          </article>
         </section>
         {currentStat === 1 ? this.renderQuiz() : console.log("it's not 1")}
-        {currentStat === 2 ? this.renderTieBreaker() : console.log("it's not 2")}
+        {currentStat === 2
+          ? this.renderTieBreaker()
+          : console.log("it's not 2")}
         {currentStat === 3 ? this.renderResult() : console.log("it's not 3")}
-        
+
         {/* {!this.state.result && noTieYet ? this.renderQuiz() : console.log(this.state.result)} */}
         {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
       </main>
