@@ -9,7 +9,7 @@ import TieBreaker from "./components/tieBreaker/TieBreaker";
 import LogoWhite from "./assets/MFSRI_logo_white.png";
 
 let currentStat = 1;
-var resultStorage = []
+var resultStorage = [];
 
 class App extends Component {
   constructor(props) {
@@ -171,7 +171,7 @@ class App extends Component {
   }
 
   setResults(result) {
-    resultStorage = result
+    resultStorage = result;
     // const tbAnswerOp = "poofnav"
     // if (currentStat == 2) {
     //  return tbAnswerOp = tieBreakerQues.map((question) =>
@@ -194,7 +194,7 @@ class App extends Component {
       currentStat = 2;
       this.setState({ result: "poop" });
       console.log("tie-breaker");
-      
+
       // this.renderTieBreaker()
       // we are given an "undetermined" result
       // renderTieBreaker()
@@ -215,19 +215,26 @@ class App extends Component {
     );
   }
 
+  // This function renders the tie breaker
   renderTieBreaker() {
-    var tiedResults = []
-    var filteredOptions = []
+    // we have an empty array that will be filled with the tie breaker types
+    var filteredOptions = [];
+    // using a for loop to loop over the specializations (4)...
     for (var i = 0; i < 4; i++) {
-      if (this.state.tbAnswerOptions[i].type === resultStorage[0]){
-        filteredOptions[i] = this.state.tbAnswerOptions[i]
+      // and nesting another for loop that loops over the resultStorage length (being the tied types)
+      for (var j = 0; j < resultStorage.length; j++) {
+        // if i of the answer options equals the result storage
+        // 
+        if (this.state.tbAnswerOptions[i].type === resultStorage[j]) {
+          filteredOptions[i] = this.state.tbAnswerOptions[i];
+        }
       }
     }
     console.log("this is a tie breaker");
     // this.state.tbAnswerOptions.filter(() => this.answers[0])
-    console.log(resultStorage)
-    console.log(this.state.tbAnswerOptions)
-    console.log(filteredOptions)
+    console.log(resultStorage);
+    console.log(this.state.tbAnswerOptions);
+    console.log(filteredOptions);
     return (
       <TieBreaker
         tbAnswer={this.state.answer}
@@ -239,7 +246,6 @@ class App extends Component {
       />
     );
   }
-  
 
   renderResult() {
     return <Result quizResult={this.state.result} />;

@@ -85,27 +85,27 @@ const quizQuestions = [
       },
     ],
   },
-  // {
-  //   question: "Question Five",
-  //   answers: [
-  //     {
-  //       type: "Necro",
-  //       content: "necro answer",
-  //     },
-  //     {
-  //       type: "Fixer",
-  //       content: "fixer answer",
-  //     },
-  //     {
-  //       type: "Blaster",
-  //       content: "blaster answer",
-  //     },
-  //     {
-  //       type: "Knower",
-  //       content: "knower answer",
-  //     },
-  //   ],
-  // },
+  {
+    question: "Question Five",
+    answers: [
+      {
+        type: "Necro",
+        content: "necro answer",
+      },
+      {
+        type: "Fixer",
+        content: "fixer answer",
+      },
+      {
+        type: "Blaster",
+        content: "blaster answer",
+      },
+      {
+        type: "Knower",
+        content: "knower answer",
+      },
+    ],
+  },
   // {
   //   question: "Question Six",
   //   answers: [
@@ -140,43 +140,43 @@ const quizQuestions = [
   //     },
   //   ],
   // },
-  // {
-  //   question: "Question Eight",
-  //   answers: [
-  //     {
-  //       type: "Necro",
-  //       content: "necro answer",
-  //     },
-  //     {
-  //       type: "Fixer",
-  //       content: "fixer answer",
-  //     },
-  //     {
-  //       type: "Blaster",
-  //       content: "blaster answer",
-  //     },
-  //     {
-  //       type: "Knower",
-  //       content: "knower answer",
-  //     },
-  //     {
-  //       type: "Necro",
-  //       content: "necro answer",
-  //     },
-  //     {
-  //       type: "Fixer",
-  //       content: "fixer answer",
-  //     },
-  //     {
-  //       type: "Blaster",
-  //       content: "blaster answer",
-  //     },
-  //     {
-  //       type: "Knower",
-  //       content: "knower answer",
-  //     },
-  //   ],
-  // },
+  {
+    question: "Question Eight",
+    answers: [
+      {
+        type: "Necro",
+        content: "necro answer",
+      },
+      {
+        type: "Fixer",
+        content: "fixer answer",
+      },
+      {
+        type: "Blaster",
+        content: "blaster answer",
+      },
+      {
+        type: "Knower",
+        content: "knower answer",
+      },
+      {
+        type: "Necro",
+        content: "necro answer",
+      },
+      {
+        type: "Fixer",
+        content: "fixer answer",
+      },
+      {
+        type: "Blaster",
+        content: "blaster answer",
+      },
+      {
+        type: "Knower",
+        content: "knower answer",
+      },
+    ],
+  },
 ];
 
 export default quizQuestions;
