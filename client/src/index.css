@@ -5,8 +5,12 @@ body {
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  font-family: "Langar", cursive;
+  font-family: 'Poppins', sans-serif;
   color: white;
+}
+
+h1, h5 {
+  font-family: "Langar", cursive;
 }
 
 .content {
@@ -14,10 +18,11 @@ body {
 }
 
 .container {
-  padding-top: 20px;
-  width: 550px;
-  height: 450px;
-  background-color: rgb(204, 195, 198, 0.7);
+  padding-top: 5px;
+  width: 500px;
+  height: 479px;
+  background: linear-gradient(to top, transparent, rgb(204, 195, 198, 0.9))
+  /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
 .quiz-title,
@@ -31,18 +36,47 @@ body {
 }
 
 .answers-btn {
-  width: 48.5%;
-  height: 75px;
+  width: 420px;
+  height: 60px;
   margin: 3px;
   text-align: center;
+  vertical-align: center;
+/* line-height: 40px; */
 }
 
 .quiz {
   align-content: center;
 }
 
-.question,
-.question-count {
+
+#youGot {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#progress{
+  height: 2px;
+}
+
+#progress-bar {
+  width: 0%;
+}
+
+#you-got{
+  margin: auto;
+  width: 500px;
+}
+
+#countdown {
+  margin: auto;
+  width: 500px;
+  font-size: 10px;
+}
+
+.question {
+  margin: auto;
+  height: 60px;
+  width: 550px;
   text-align: center;
 }
 
@@ -61,13 +95,13 @@ body {
 }
 
 .photo {
-  width: 300px;
+  width: 460px;
   height: auto;
 }
 
 .share{
-  color: black;
-}
+  color: darkgray;
+  }
 
 #logo {
   bottom:0;

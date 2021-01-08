@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // this function displays the question
 function Question(props) {
   return (
-    <h2 className="question">{props.content}</h2>
+    <h4 className="question"> {props.content} </h4>
   );
 }
 

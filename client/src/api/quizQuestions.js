@@ -2,7 +2,7 @@ const NecroKnower = ["Necro", "Knower"]
 console.log(NecroKnower)
 const quizQuestions = [
   {
-    question: "There is a software glitch in your computer. How do you fix it?",
+    question: "There is a software glitch on your computer. How do you fix it?",
     answers: [
       {
         type: "Necro",
@@ -78,35 +78,35 @@ const quizQuestions = [
       },
     ],
   },
-  // {
-  //   question: "You have free time to read a book. What genre do you pick from?",
-  //   answers: [
-  //     {
-  //       type: "Necro, Fixer",
-  //       content: "Romance",
-  //     },
-  //     {
-  //       type: "Necro, Knower",
-  //       content: "Sci-Fi/Fantasy",
-  //     },
-  //     {
-  //       type: "Fixer, Blaster",
-  //       content: "Action/Adventure",
-  //     },
-  //     {
-  //       type: "Blaster, Knower",
-  //       content: "Suspense/Thriller",
-  //     },
-  //     {
-  //       type: "Fixer, Knower",
-  //       content: "Poetry",
-  //     },
-  //     {
-  //       type: "Necro, Blaster",
-  //       content: "Horror/Mystery",
-  //     },
-  //   ],
-  // },
+  {
+    question: "You have free time to read a book. What genre do you pick from?",
+    answers: [
+      {
+        type: "Necro, Fixer",
+        content: "Romance",
+      },
+      {
+        type: "Necro, Knower",
+        content: "Sci-Fi/Fantasy",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Action/Adventure",
+      },
+      {
+        type: "Blaster, Knower",
+        content: "Suspense/Thriller",
+      },
+      {
+        type: "Fixer, Knower",
+        content: "Poetry",
+      },
+      {
+        type: "Necro, Blaster",
+        content: "Horror/Mystery",
+      },
+    ],
+  },
   // {
   //   // IMAGES?
   //   question: "If you were to have an Animal Form, which would it be?",

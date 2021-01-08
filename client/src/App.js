@@ -242,10 +242,10 @@ class App extends Component {
             Motherland: Fort Salem
             <br /> Specialization Quiz
           </h1>
-          <br />
-          <h5 id="intro-text">
+          {/* <br /> */}
+          {/* <h5 id="intro-text">
             Find out where you belong in this witch's Army!
-          </h5>
+          </h5> */}
           <br />
           <article id="logo">
             <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
