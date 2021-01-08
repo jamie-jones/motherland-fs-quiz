@@ -5,18 +5,19 @@ import PropTypes from "prop-types";
 function QuestionCount(props) {
   return (
     <div className="question-count">
-      {/* <div className="progress" id="progress">
+          <div id="countdown">
+            <p><span>{props.counter}</span> of <span>{props.total}</span>
+          <div className="progress" id="progress">
         <div
           className="progress-bar"
           id="progress-bar"
           role="progressbar"
-          aria-valuenow="0"
+          aria-valuenow="25"
           aria-valuemin="0"
           aria-valuemax="100"
-        > */}
-          <p id="countdown"><span>{props.counter}</span> of <span>{props.total}</span></p>
-        {/* </div> */}
-      {/* </div> */}
+        ></div>
+        </div></p>
+      </div>
     </div>
   );
 }

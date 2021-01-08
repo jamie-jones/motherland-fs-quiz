@@ -14,22 +14,32 @@ function Result(props) {
   if (props.quizResult === "Necro") {
     return (
       <div>
-        <h6 id="you-got">You got:</h6>
+        <div className="photo-container">
+          <h6 id="you-got">You got:</h6>
+          <img className="photo" src={NecroBadge} alt="NecroBadge" />
+        </div>
+        <br />
         <main className="container">
           {/* <div className="results-container"> */}
-            {/* <div className="results-section"> */}
-              {/* <h1 id="youGot">{props.quizResult}!</h1> */}
-              <img className="photo" src={NecroBadge} alt="NecroBadge" />
-              <br />
-              <br />
-              <h5>Necro People: Scylla Ramshorn, Izadora</h5>
-              <CopyToClipboard text={url}>
-                <a>
-                  <i class="fas fa-2x fa-share-alt-square share"></i>
-                </a>
-              </CopyToClipboard>
-              <Form />
-            {/* </div> */}
+          {/* <div className="results-section"> */}
+          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <CopyToClipboard text={url}>
+            <a className="share">
+              <i class="fas fa-2x fa-share-alt-square"></i>
+            </a>
+          </CopyToClipboard>
+          <br/>
+          <Form />
+          {/* </div> */}
           {/* </div> */}
         </main>
       </div>
@@ -37,22 +47,32 @@ function Result(props) {
   } else if (props.quizResult === "Fixer") {
     return (
       <div>
-        <h6 id="you-got">You got:</h6>
+        <div className="photo-container">
+          <h6 id="you-got">You got:</h6>
+          <img className="photo" src={FixerBadge} alt="FixerBadge" />
+        </div>
+        <br />
         <main className="container">
           {/* <div className="results-container"> */}
-            {/* <div className="results-section"> */}
-              {/* <h1 id="youGot">{props.quizResult}!</h1> */}
-              <img className="photo" src={FixerBadge} alt="FixerBadge" />
-              <br />
-              <br />
-              <h5>Fixer People: Raelle Collar, Willa Collar</h5>
-              <CopyToClipboard text={url}>
-                <a>
-                  <i class="fas fa-2x fa-share-alt-square share"></i>
-                </a>
-              </CopyToClipboard>
-              <Form />
-            {/* </div> */}
+          {/* <div className="results-section"> */}
+          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <CopyToClipboard text={url}>
+            <a className="share">
+              <i class="fas fa-2x fa-share-alt-square"></i>
+            </a>
+          </CopyToClipboard>
+          <br/>
+          <Form />
+          {/* </div> */}
           {/* </div> */}
         </main>
       </div>
@@ -60,21 +80,31 @@ function Result(props) {
   } else if (props.quizResult === "Blaster") {
     return (
       <div>
-        <h6 id="you-got">You got:</h6>
+        <div className="photo-container">
+          <h6 id="you-got">You got:</h6>
+          <img className="photo" src={BlasterBadge} alt="BlasterBadge" />
+        </div>
+        <br />
         <main className="container">
           {/* <div className="results-container"> */}
           {/* <div className="results-section"> */}
-            {/* <h1 id="youGot">{props.quizResult}!</h1> */}
-            <img className="photo" src={BlasterBadge} alt="BlasterBadge" />
-            <br />
-            <br />
-            <h5>Blaster People: Abigail Bellweather, Libba Swythe</h5>
-            <CopyToClipboard text={url}>
-              <a>
-                <i class="fas fa-2x fa-share-alt-square share"></i>
-              </a>
-            </CopyToClipboard>
-            <Form />
+          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <CopyToClipboard text={url}>
+            <a className="share">
+              <i class="fas fa-2x fa-share-alt-square"></i>
+            </a>
+          </CopyToClipboard>
+          <br/>
+          <Form />
           {/* </div> */}
           {/* </div> */}
         </main>
@@ -83,22 +113,32 @@ function Result(props) {
   } else if (props.quizResult === "Knower") {
     return (
       <div>
-        <h6 id="you-got">You got:</h6>
+        <div className="photo-container">
+          <h6 id="you-got">You got:</h6>
+          <img className="photo" src={KnowerBadge} alt="KnowerBadge" />
+        </div>
+        <br />
         <main className="container">
           {/* <div className="results-container"> */}
-            {/* <div className="results-section"> */}
-              {/* <h1 id="youGot">{props.quizResult}!</h1> */}
-              <img className="photo" src={KnowerBadge} alt="KnowerBadge" />
-              <br />
-              <br />
-              <h5>Knower People: Tally Craven</h5>
-              <CopyToClipboard text={url}>
-                <a>
-                  <i class="fas fa-2x fa-share-alt-square share"></i>
-                </a>
-              </CopyToClipboard>
-              <Form />
-            {/* </div> */}
+          {/* <div className="results-section"> */}
+          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <CopyToClipboard text={url}>
+            <a className="share">
+              <i class="fas fa-2x fa-share-alt-square"></i>
+            </a>
+          </CopyToClipboard>
+          <br/>
+          <Form />
+          {/* </div> */}
           {/* </div> */}
         </main>
       </div>

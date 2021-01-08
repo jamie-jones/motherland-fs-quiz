@@ -2,6 +2,7 @@ import Result from "./components/Result";
 import quizQuestions from "./api/quizQuestions";
 import tieBreakerQues from "./api/tieBreakerQues";
 import Quiz from "./components/Quiz";
+import Intro from "./components/Intro";
 import React, { Component } from "react";
 import "./index.css";
 import "./App.css";
@@ -34,8 +35,16 @@ class App extends Component {
       tbAnswersCount: {},
       tbResult: "",
     };
-
+    this._onStartClick = this._onStartClick.bind(this);
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+  }
+
+  renderIntro() {
+    return <Intro _onStartClick={this._onStartClick} title="Intro" />;
+  }
+
+  _onStartClick() {
+    setTimeout(() => this.setState({ startQuiz: !this.state.startQuiz }), 1000);
   }
 
   // componentDidMount gets invoked after the element has been mounted (first render)
@@ -135,7 +144,6 @@ class App extends Component {
   getResults() {
     const answersCount = this.state.answersCount;
     // Object.key returns an array of strings that represent all of the answer types (Necro, Fixer, etc.)
-    
 
     // This is where we search the string of answers and find the number of occurrences of each type. the "g" stands for "global"
     var countNecro = (answerList.match(/Necro/g) || []).length;
@@ -148,13 +156,13 @@ class App extends Component {
     // console.log(countBlaster);
     // console.log(countKnower)
 
-    console.log(answersCount)
+    console.log(answersCount);
 
-    answersCount["Necro"] = countNecro
-    answersCount["Fixer"] = countFixer
-    answersCount["Blaster"] = countBlaster
-    answersCount["Knower"] = countKnower
-  
+    answersCount["Necro"] = countNecro;
+    answersCount["Fixer"] = countFixer;
+    answersCount["Blaster"] = countBlaster;
+    answersCount["Knower"] = countKnower;
+
     // console.log(answersCount["Necro"])
 
     const answersCountKeys = Object.keys(answersCount);
@@ -235,35 +243,35 @@ class App extends Component {
 
   // here, we render the first things being displayed (the welcome and the beginning on the quiz)
   render() {
-    return (
-      <main className="content">
-        <section className="quiz">
-          <h1 className="quiz-title">
-            Motherland: Fort Salem
-            <br /> Specialization Quiz
-          </h1>
-          {/* <br /> */}
-          {/* <h5 id="intro-text">
-            Find out where you belong in this witch's Army!
-          </h5> */}
-          <br />
-          <article id="logo">
-            <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
-            <p id="created-by">
-              Created by: <br /> MFSRI <br /> IT Dep
-            </p>
-          </article>
-        </section>
-        {currentStat === 1 ? this.renderQuiz() : console.log("it's not 1")}
-        {currentStat === 2
-          ? this.renderTieBreaker()
-          : console.log("it's not 2")}
-        {currentStat === 3 ? this.renderResult() : console.log("it's not 3")}
+    let startQuiz = this.state.startQuiz;
+    if (startQuiz) {
+      return (
+        <main className="content">
+          <section className="quiz">
+            <h1 className="quiz-title">
+              Motherland: Fort Salem
+              <br /> Specialization Quiz
+            </h1>
+            <br />
+            <article id="logo">
+              <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
+              <p id="created-by">
+                Created by: <br /> MFSRI <br /> IT Dep
+              </p>
+            </article>
+          </section>
+          {currentStat === 1 ? this.renderQuiz() : console.log("it's not 1")}
+          {currentStat === 2
+            ? this.renderTieBreaker()
+            : console.log("it's not 2")}
+          {currentStat === 3 ? this.renderResult() : console.log("it's not 3")}
 
-        {/* {!this.state.result && noTieYet ? this.renderQuiz() : console.log(this.state.result)} */}
-        {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
-      </main>
-    );
+          {/* {!this.state.result && noTieYet ? this.renderQuiz() : console.log(this.state.result)} */}
+          {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
+        </main>
+      );
+    }
+    return this.renderIntro();
   }
 }
 // this.state.result ? this.renderResult() : this.renderQuiz()
