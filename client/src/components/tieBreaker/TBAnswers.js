@@ -38,7 +38,7 @@ function TBAnswers(props) {
 }
 
 TBAnswers.propTypes = {
-  answerType: PropTypes.string.isRequired,
+  answerType: PropTypes.array.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
   onAnswerSelected: PropTypes.func.isRequired,

@@ -1,22 +1,22 @@
 const tieBreakerQues = [
     {
-        question: "Tie Breaker Question",
+        question: "Choose one:",
         answers: [
             {
                 type: "Necro",
-                content: "Necro tie breaker answer"
+                content: "Perseverance"
             },
             {
                 type: "Fixer",
-                content: "Fixer tie breaker answer"
+                content: "Courage"
             },
             {
                 type: "Blaster",
-                content: "Blaster tie breaker answer"
+                content: "Power"
             },
             {
                 type: "Knower",
-                content: "Knower tie breaker answer"
+                content: "Wisdom"
             }
         ]
     }

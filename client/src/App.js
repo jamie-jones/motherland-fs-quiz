@@ -7,9 +7,11 @@ import "./index.css";
 import "./App.css";
 import TieBreaker from "./components/tieBreaker/TieBreaker";
 import LogoWhite from "./assets/MFSRI_logo_white.png";
+import { object } from "prop-types";
 
 let currentStat = 1;
-var resultStorage = [];
+let resultStorage = [];
+let answerList = "";
 
 class App extends Component {
   constructor(props) {
@@ -77,36 +79,8 @@ class App extends Component {
     return array;
   }
 
-  // create an empty array filteredArray
-  // filteredArray(array) {
-  //   var tiedResults = [];
-  //   // take values from the max to see which types are tied
-  //   var maxedResults = this.getResults();
-  //   console.log(maxedResults);
-  //   // put those values in a tied array
-  //   for (var i = 0; i < 4; i++) {
-  //     if (array[0] == maxedResults) {
-  //       tiedResults.push(...maxedResults);
-  //     }
-  //   }
-
-  //   return tiedResults;
-  // }
-  // take the parameter (array)
-
-  // for (0 - 3) {
-  // if Parameters(0).type is in tied, add parameter (0) to filteredArray
-  // }
-
-  // make filterArray function (array) with if else.
-  // similar to shuffleArray
-  // so that if an answer is not of the highest result,
-  // then it is not thrown away and if it is, then the
-  // question with the answer type is kept in to show
-
   // this function does two things...
   handleAnswerSelected(event) {
-    console.log("hand le answer");
     // sets the answer...
     this.setUserAnswer(event.currentTarget.value);
     // and if the questionId is less than the question length...
@@ -131,6 +105,9 @@ class App extends Component {
       },
       answer: answer,
     }));
+    // we concat the answers to become one entire string as they are chosen
+    answerList = answerList.concat(answer) + ", ";
+    console.log(answerList);
   }
 
   // function for setting next question
@@ -158,12 +135,33 @@ class App extends Component {
   getResults() {
     const answersCount = this.state.answersCount;
     // Object.key returns an array of strings that represent all of the answer types (Necro, Fixer, etc.)
+    
+
+    // This is where we search the string of answers and find the number of occurrences of each type. the "g" stands for "global"
+    var countNecro = (answerList.match(/Necro/g) || []).length;
+    var countFixer = (answerList.match(/Fixer/g) || []).length;
+    var countBlaster = (answerList.match(/Blaster/g) || []).length;
+    var countKnower = (answerList.match(/Knower/g) || []).length;
+
+    // console.log(countNecro);
+    // console.log(countFixer);
+    // console.log(countBlaster);
+    // console.log(countKnower)
+
+    console.log(answersCount)
+
+    answersCount["Necro"] = countNecro
+    answersCount["Fixer"] = countFixer
+    answersCount["Blaster"] = countBlaster
+    answersCount["Knower"] = countKnower
+  
+    // console.log(answersCount["Necro"])
+
     const answersCountKeys = Object.keys(answersCount);
     // we map over the answerCountKeys to return an array of the values
     const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
     // we get the highest number of the array with the Math.max.apply
     const maxAnswerCount = Math.max.apply(null, answersCountValues);
-
     // here, we use .filter to filter in the maxAnswerCount, giving us only the maxed out answer type
     return answersCountKeys.filter(
       (key) => answersCount[key] === maxAnswerCount
@@ -172,19 +170,8 @@ class App extends Component {
 
   setResults(result) {
     resultStorage = result;
-    // const tbAnswerOp = "poofnav"
-    // if (currentStat == 2) {
-    //  return tbAnswerOp = tieBreakerQues.map((question) =>
-    //   this.filteredArray(question.answers)
-    // );
-    // }
-
-    // this.setState({
-    //   tbQuestion: tieBreakerQues[0].question,
-    //   tbAnswerOptions: tbAnswerOp[0],
-    // });
     // if the result for maxAnswerCount is only one answer type...
-    console.log(result.length);
+    // console.log(result.length);
     if (result.length === 1) {
       currentStat = 3;
       // the result will be set
@@ -193,11 +180,7 @@ class App extends Component {
     } else {
       currentStat = 2;
       this.setState({ result: "poop" });
-      console.log("tie-breaker");
-
-      // this.renderTieBreaker()
-      // we are given an "undetermined" result
-      // renderTieBreaker()
+      // console.log("tie-breaker");
     }
   }
 
@@ -224,17 +207,16 @@ class App extends Component {
       // and nesting another for loop that loops over the resultStorage length (being the tied types)
       for (var j = 0; j < resultStorage.length; j++) {
         // if i of the answer options equals the result storage
-        // 
+        //
         if (this.state.tbAnswerOptions[i].type === resultStorage[j]) {
           filteredOptions[i] = this.state.tbAnswerOptions[i];
         }
       }
     }
-    console.log("this is a tie breaker");
-    // this.state.tbAnswerOptions.filter(() => this.answers[0])
-    console.log(resultStorage);
-    console.log(this.state.tbAnswerOptions);
-    console.log(filteredOptions);
+    // console.log("this is a tie breaker");
+    // console.log(resultStorage);
+    // console.log(this.state.tbAnswerOptions);
+    // console.log(filteredOptions);
     return (
       <TieBreaker
         tbAnswer={this.state.answer}

@@ -41,7 +41,7 @@ function Quiz(props) {
   // original destinations, which are imported at the top. All are required.
   Quiz.propTypes = {
     answer: PropTypes.string.isRequired,
-    answerOptions: PropTypes.array.isRequired,
+    answerOptions: PropTypes.string.isRequired,
     counter: PropTypes.number.isRequired,
     question: PropTypes.string.isRequired,
     questionId: PropTypes.number.isRequired,
