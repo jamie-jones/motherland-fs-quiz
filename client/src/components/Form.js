@@ -5,6 +5,15 @@ class Form extends Component {
     specialization: "",
   };
 
+  TextFile = () => {
+      const element = document.createElement("a");
+      const file = new Blob([document.getElementById("message").value], {type: "text/plain"});
+      element.href = URL.createObjectURL(file);
+      element.download = "myFile.txt";
+      document.body.appendChild(element)
+      element.click()
+  }
+
   handleInputChange = (event) => {
     const { name, value } = event.target;
 
