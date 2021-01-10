@@ -12,7 +12,7 @@ function QuestionCount(props) {
           className="progress-bar"
           id="progress-bar"
           role="progressbar"
-          aria-valuenow="25"
+          aria-valuenow="5.8"
           aria-valuemin="0"
           aria-valuemax="100"
         ></div>

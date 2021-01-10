@@ -4,13 +4,11 @@ import BlasterBadge from "../assets/blaster.png";
 import NecroBadge from "../assets/necro.png";
 import FixerBadge from "../assets/fixer.png";
 import KnowerBadge from "../assets/knower.png";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+import Share from "./ShareBtn";
 import Form from "./Form";
 
 // this function actually shows the results in HTML form, calling the propTypes quizResult
 function Result(props) {
-  const url = window.location.href;
-  console.log(props.quizResult);
   if (props.quizResult === "Necro") {
     return (
       <div>
@@ -20,9 +18,6 @@ function Result(props) {
         </div>
         <br />
         <main className="container">
-          {/* <div className="results-container"> */}
-          {/* <div className="results-section"> */}
-          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -32,15 +27,9 @@ function Result(props) {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <CopyToClipboard text={url}>
-            <a className="share">
-              <i class="fas fa-2x fa-share-alt-square"></i>
-            </a>
-          </CopyToClipboard>
-          <br/>
+          <Share />
+          <br />
           <Form />
-          {/* </div> */}
-          {/* </div> */}
         </main>
       </div>
     );
@@ -53,9 +42,6 @@ function Result(props) {
         </div>
         <br />
         <main className="container">
-          {/* <div className="results-container"> */}
-          {/* <div className="results-section"> */}
-          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -65,15 +51,9 @@ function Result(props) {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <CopyToClipboard text={url}>
-            <a className="share">
-              <i class="fas fa-2x fa-share-alt-square"></i>
-            </a>
-          </CopyToClipboard>
-          <br/>
+          <Share />
+          <br />
           <Form />
-          {/* </div> */}
-          {/* </div> */}
         </main>
       </div>
     );
@@ -86,9 +66,6 @@ function Result(props) {
         </div>
         <br />
         <main className="container">
-          {/* <div className="results-container"> */}
-          {/* <div className="results-section"> */}
-          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -98,15 +75,9 @@ function Result(props) {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <CopyToClipboard text={url}>
-            <a className="share">
-              <i class="fas fa-2x fa-share-alt-square"></i>
-            </a>
-          </CopyToClipboard>
-          <br/>
+          <Share />
+          <br />
           <Form />
-          {/* </div> */}
-          {/* </div> */}
         </main>
       </div>
     );
@@ -119,9 +90,6 @@ function Result(props) {
         </div>
         <br />
         <main className="container">
-          {/* <div className="results-container"> */}
-          {/* <div className="results-section"> */}
-          {/* <h1 id="youGot">{props.quizResult}!</h1> */}
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -131,15 +99,9 @@ function Result(props) {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <CopyToClipboard text={url}>
-            <a className="share">
-              <i class="fas fa-2x fa-share-alt-square"></i>
-            </a>
-          </CopyToClipboard>
-          <br/>
+          <Share />
+          <br />
           <Form />
-          {/* </div> */}
-          {/* </div> */}
         </main>
       </div>
     );

@@ -8,11 +8,31 @@ import "./index.css";
 import "./App.css";
 import TieBreaker from "./components/tieBreaker/TieBreaker";
 import LogoWhite from "./assets/MFSRI_logo_white.png";
-import { object } from "prop-types";
+import "./components/Form";
+import "./components/QuestionCount";
 
 let currentStat = 1;
 let resultStorage = [];
 let answerList = "";
+
+var i = 0;
+var width = 5.9;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("progress-bar");
+    console.log(width)
+    var id = setInterval(frame, 10);
+    function frame() {
+      if (width < 100) {
+        i = 0;
+        width+=5.9;
+        elem.style.width = width + "%";
+        clearInterval(id);
+    }
+  }
+}
+}
 
 class App extends Component {
   constructor(props) {
@@ -87,6 +107,7 @@ class App extends Component {
 
     return array;
   }
+  
 
   // this function does two things...
   handleAnswerSelected(event) {
@@ -95,7 +116,7 @@ class App extends Component {
     // and if the questionId is less than the question length...
     if (this.state.questionId < quizQuestions.length) {
       // we then set the next question (300 means 300ms delay between transitions)
-      setTimeout(() => this.setNextQuestion(), 300);
+      setTimeout(() => this.setNextQuestion(), move(), 300);
     } else {
       // else, we are taken to the results
       setTimeout(() => this.setResults(this.getResults()), 300);
@@ -254,9 +275,11 @@ class App extends Component {
             </h1>
             <br />
             <article id="logo">
-              <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
+              <a href="https://mfs-research-institute.tumblr.com/" target="_blank">
+                <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
+              </a>
               <p id="created-by">
-                Created by: <br /> MFSRI <br /> IT Dep
+                Created by: <br /> MFSRI <br /> Dev. Dep
               </p>
             </article>
           </section>

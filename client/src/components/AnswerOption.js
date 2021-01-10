@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 // this function shows the answer options
 function AnswerOption(props) {
-
   function renderAnswerOptions(key) {
     return (
       <AnswerOption
@@ -16,7 +15,7 @@ function AnswerOption(props) {
       />
     );
   }
-  
+
   // here, we return the answers to choose from as radio buttons and label
   return (
     <div className="answers-section">
@@ -31,8 +30,12 @@ function AnswerOption(props) {
         value={props.answerType}
         disabled={props.answer}
         onChange={props.onAnswerSelected}
+        onclick="move()"
       />
-      <label className="btn btn-secondary radioCustomLabel answers-btn" htmlFor={props.answerType}>
+      <label
+        className="btn btn-secondary radioCustomLabel answers-btn"
+        htmlFor={props.answerType}
+      >
         {props.answerContent}
       </label>
     </div>
@@ -43,7 +46,7 @@ AnswerOption.propTypes = {
   answerType: PropTypes.string.isRequired,
   answerContent: PropTypes.string.isRequired,
   answer: PropTypes.string.isRequired,
-  onAnswerSelected: PropTypes.func.isRequired
+  onAnswerSelected: PropTypes.func.isRequired,
 };
 
 export default AnswerOption;

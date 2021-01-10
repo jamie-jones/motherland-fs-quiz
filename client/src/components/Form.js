@@ -6,13 +6,27 @@ class Form extends Component {
   };
 
   TextFile = () => {
-      const element = document.createElement("a");
-      const file = new Blob([document.getElementById("message").value], {type: "text/plain"});
-      element.href = URL.createObjectURL(file);
-      element.download = "myFile.txt";
-      document.body.appendChild(element)
-      element.click()
-  }
+    const element = document.createElement("a");
+    const file = new Blob([document.getElementById("input").value], {
+      type: "text/plain;charset=utf-8",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "myFile.txt";
+    document.body.appendChild(element);
+    element.click();
+  };
+
+  formGone = () => {
+    var disappear = document.getElementById("form");
+    var thanks = document.getElementById("thanks");
+
+    if (disappear.style.display === "block") {
+      disappear.style.display = "none";
+      thanks.style.display = "block";
+    } else {
+      disappear.style.display = "block";
+    }
+  };
 
   handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -25,7 +39,10 @@ class Form extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
 
-    console.log("Submitted Form");
+    // this.TextFile();
+
+    this.formGone();
+
     this.setState({
       specialization: "",
     });
@@ -41,13 +58,14 @@ class Form extends Component {
             name="specialization"
             onChange={this.handleInputChange}
             type="text"
-            id="placeholder"
+            id="input"
             placeholder="What did you think you were?"
           />
           <button onClick={this.handleFormSubmit} id="submit-form">
             Submit
           </button>
         </form>
+        <h6 id="thanks">Thanks!</h6>
       </div>
     );
   }

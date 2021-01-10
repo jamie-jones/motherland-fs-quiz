@@ -23,7 +23,6 @@ const quizQuestions = [
     ],
   },
   {
-    // IMAGES?
     question: "Choose a weapon:",
     answers: [
       {
@@ -44,69 +43,69 @@ const quizQuestions = [
       },
     ],
   },
-  {
-    question: "Are you an Extrovert or an Introvert?",
-    answers: [
-      {
-        type: "Necro Knower",
-        content: "Introvert",
-      },
-      {
-        type: "Fixer Blaster",
-        content: "Extrovert",
-      },
-    ],
-  },
-  {
-    question: "You are trying to woo a potential mate! How do you do it?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Write a song or make a playlist and play it for them at their bedroom window",
-      },
-      {
-        type: "Fixer",
-        content: "Get them their favorite breakfast beverage and pastry and leave it for them before first bell",
-      },
-      {
-        type: "Blaster",
-        content: "Make a “Do you like me? Check ‘yes’ or ‘no’” note and send it by parakeet",
-      },
-      {
-        type: "Knower",
-        content: "Inquire with their unit to find out if they’re interested",
-      },
-    ],
-  },
-  {
-    question: "You have free time to read a book. What genre do you pick from?",
-    answers: [
-      {
-        type: "Necro, Fixer",
-        content: "Romance",
-      },
-      {
-        type: "Necro, Knower",
-        content: "Sci-Fi/Fantasy",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Action/Adventure",
-      },
-      {
-        type: "Blaster, Knower",
-        content: "Suspense/Thriller",
-      },
-      {
-        type: "Fixer, Knower",
-        content: "Poetry",
-      },
-      {
-        type: "Necro, Blaster",
-        content: "Horror/Mystery",
-      },
-    ],
-  },
+  // {
+  //   question: "Are you an Extrovert or an Introvert?",
+  //   answers: [
+  //     {
+  //       type: "Necro Knower",
+  //       content: "Introvert",
+  //     },
+  //     {
+  //       type: "Fixer Blaster",
+  //       content: "Extrovert",
+  //     },
+  //   ],
+  // },
+  // {
+  //   question: "You are trying to woo a potential mate! How do you do it?",
+  //   answers: [
+  //     {
+  //       type: "Necro",
+  //       content: "Write a song or make a playlist and play it for them at their bedroom window",
+  //     },
+  //     {
+  //       type: "Fixer",
+  //       content: "Get them their favorite breakfast beverage and pastry and leave it for them before first bell",
+  //     },
+  //     {
+  //       type: "Blaster",
+  //       content: "Make a “Do you like me? Check ‘yes’ or ‘no’” note and send it by parakeet",
+  //     },
+  //     {
+  //       type: "Knower",
+  //       content: "Inquire with their unit to find out if they’re interested",
+  //     },
+  //   ],
+  // },
+  // {
+  //   question: "You have free time to read a book. What genre do you pick from?",
+  //   answers: [
+  //     {
+  //       type: "Necro, Fixer",
+  //       content: "Romance",
+  //     },
+  //     {
+  //       type: "Necro, Knower",
+  //       content: "Sci-Fi/Fantasy",
+  //     },
+  //     {
+  //       type: "Fixer, Blaster",
+  //       content: "Action/Adventure",
+  //     },
+  //     {
+  //       type: "Blaster, Knower",
+  //       content: "Suspense/Thriller",
+  //     },
+  //     {
+  //       type: "Fixer, Knower",
+  //       content: "Poetry",
+  //     },
+  //     {
+  //       type: "Necro, Blaster",
+  //       content: "Horror/Mystery",
+  //     },
+  //   ],
+  // },
   // {
   //   // IMAGES?
   //   question: "If you were to have an Animal Form, which would it be?",

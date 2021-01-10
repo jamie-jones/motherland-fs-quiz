@@ -10,7 +10,8 @@ body {
 }
 
 h1,
-h5, #intro-text{
+h5,
+#intro-text {
   font-family: "Langar", cursive;
 }
 
@@ -41,8 +42,9 @@ h5, #intro-text{
   height: 60px;
   margin: 3px;
   text-align: center;
-  vertical-align: center;
-  /* line-height: 40px; */
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
 }
 
 .quiz {
@@ -81,22 +83,36 @@ h5, #intro-text{
 }
 
 .share {
-  color: darkslateblue;
+  color: rgb(73, 79, 85);
   float: right;
 }
 
-#start-btn{
-  background-color:rgb(156,12,24);
+.share:hover {
+  color: rgb(47, 48, 46);
+}
+.share-icon {
+  float: right;
+}
+
+#copied {
+  font-size: xx-small;
+  display: none;
+}
+
+#start-btn {
+  background-color: rgb(156, 12, 24);
   color: white;
   font-weight: bold;
   border-radius: 4px;
-  border-color: rgb(156,12,24);
-  /* height:20px; 
-  width:100px;  */
-  margin: -20px -50px; 
-  position:relative;
-  top:20%; 
-  left:45%;
+  border-color: rgb(156, 12, 24);
+  margin: -20px -50px;
+  position: relative;
+  top: 20%;
+  left: 45%;
+}
+
+#start-btn:hover {
+  background-color: rgb(111, 9, 18);
 }
 
 #youGot {
@@ -112,7 +128,7 @@ h5, #intro-text{
 }
 
 #progress-bar {
-  width: 20%;
+  width: 5.9%;
 }
 
 #you-got {
@@ -127,29 +143,41 @@ h5, #intro-text{
 }
 
 #form {
-  float: right;
+  padding-top: 30px;
+  display: block;
+  /* float: right; */
 }
 
-#placeholder{
-  width: 250px;
+#thanks {
+  padding-top: 30px;
+  text-align: center;
+  display: none;
+}
+
+#input {
+  width: 350px;
 }
 
 #submit-form {
-  background-color:rgb(156,12,24);
+  background-color: rgb(156, 12, 24);
   color: white;
   font-weight: bold;
   border-radius: 4px;
-  border-color: rgb(156,12,24);
+  border-color: rgb(156, 12, 24);
+}
+
+#submit-form:hover {
+  background-color: rgb(111, 9, 18);
 }
 
 #logo {
-  bottom: 0;
-  right: 0;
-  padding-right: 5px;
+  top: 0;
+  left: 0;
   position: absolute;
 }
 
 #ri-logo {
+  padding-left: 5px;
   width: 50px;
   height: auto;
   opacity: 0.5;
@@ -195,9 +223,8 @@ h5, #intro-text{
   }
 
   #logo {
-    bottom: 0;
-    right: 0;
-    padding-right: 5px;
+    top: 0;
+    left: 0;
     position: absolute;
   }
 }
@@ -244,9 +271,8 @@ h5, #intro-text{
   }
 
   #logo {
-    right: 0;
-    bottom: 0;
-    padding-right: 5px;
+    top: 0;
+    left: 0;
     position: absolute;
   }
 }
@@ -297,9 +323,8 @@ h5, #intro-text{
   }
 
   #logo {
-    bottom: 0;
-    right: 0;
-    padding-right: 5px;
+    top: 0;
+    left: 0;
     position: absolute;
   }
 }
