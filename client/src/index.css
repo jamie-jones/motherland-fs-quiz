@@ -142,7 +142,7 @@ h5,
   font-size: 10px;
 }
 
-#form {
+form {
   padding-top: 30px;
   display: block;
   /* float: right; */
@@ -156,6 +156,10 @@ h5,
 
 #input {
   width: 350px;
+}
+
+#answers {
+  display: none;
 }
 
 #submit-form {

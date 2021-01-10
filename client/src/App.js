@@ -208,7 +208,7 @@ class App extends Component {
       // but if the result is more than one answer type...
     } else {
       currentStat = 2;
-      this.setState({ result: "poop" });
+      this.setState({ result: "tie" });
       // console.log("tie-breaker");
     }
   }

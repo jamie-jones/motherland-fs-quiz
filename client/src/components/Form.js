@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../App";
 
 class Form extends Component {
   state = {
@@ -17,14 +18,12 @@ class Form extends Component {
   };
 
   formGone = () => {
-    var disappear = document.getElementById("form");
+    var disappear = document.getElementsById("form");
     var thanks = document.getElementById("thanks");
 
     if (disappear.style.display === "block") {
       disappear.style.display = "none";
       thanks.style.display = "block";
-    } else {
-      disappear.style.display = "block";
     }
   };
 
@@ -38,10 +37,11 @@ class Form extends Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
+    console.log("button click");
 
     // this.TextFile();
 
-    this.formGone();
+    // this.formGone();
 
     this.setState({
       specialization: "",
@@ -51,16 +51,23 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <form id="form">
+        <form
+          id="form"
+          className="gform"
+          method="POST"
+          // data-email="mfs.specquiz@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbw9-aOIHxBMV6Mn4qkJ4cMkES6Gr806D4DlsYhdDnQy7_r4FuUJ/exec"
+        >
           <h6>Help make this quiz better!</h6>
           <input
-            value={this.state.specialization}
-            name="specialization"
+            // value={this.state.specialization}
+            id="fuck"
+            name="fuck"
             onChange={this.handleInputChange}
             type="text"
-            id="input"
             placeholder="What did you think you were?"
           />
+          {/* <input id="answers" name="answers" value={this.filteredOptions} /> */}
           <button onClick={this.handleFormSubmit} id="submit-form">
             Submit
           </button>
