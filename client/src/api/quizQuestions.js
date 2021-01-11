@@ -218,27 +218,27 @@ const quizQuestions = [
   //     },
   //   ],
   // },
-  {
-    question: "You’re planning a roadtrip with your friends. You are the one who...",
-    answers: [
-      {
-        type: "Necro",
-        content: "Brings the snacks and the music. Casts your vote whenever it’s needed",
-      },
-      {
-        type: "Fixer",
-        content: "Worries about the travel plans that someone else made. You’re basically the backup planner",
-      },
-      {
-        type: "Blaster",
-        content: "Had nothing to do with the planning (thankfully!). Probably drives the most",
-      },
-      {
-        type: "Knower",
-        content: "Makes the itinerary and does most of the planning",
-      },
-    ],
-  },
+  // {
+  //   question: "You’re planning a roadtrip with your friends. You are the one who...",
+  //   answers: [
+  //     {
+  //       type: "Necro",
+  //       content: "Brings the snacks and the music. Casts your vote whenever it’s needed",
+  //     },
+  //     {
+  //       type: "Fixer",
+  //       content: "Worries about the travel plans that someone else made. You’re basically the backup planner",
+  //     },
+  //     {
+  //       type: "Blaster",
+  //       content: "Had nothing to do with the planning (thankfully!). Probably drives the most",
+  //     },
+  //     {
+  //       type: "Knower",
+  //       content: "Makes the itinerary and does most of the planning",
+  //     },
+  //   ],
+  // },
   // {
   //   question: "What do you do to relax after a stressful day?",
   //   answers: [

@@ -18,17 +18,19 @@ function TieBreaker(props) {
   }
   return (
     <div>
-        <div className="question-count" >
+      <div className="question-count">
         <p id="countdown">Bonus Question!</p>
-        </div>
-      <TBQues content={props.tbQuestion} />
-      <main className="container">
-        <div className="quiz">
-          <div className="answerOptions">
-            {props.tbAnswerOptions.map(renderTBAnswerOptions)}
+      </div>
+      <div id="tiebreaker-container">
+        <TBQues content={props.tbQuestion} />
+        <main className="container">
+          <div className="quiz">
+            <div className="answerOptions">
+              {props.tbAnswerOptions.map(renderTBAnswerOptions)}
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
   );
 }

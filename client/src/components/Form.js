@@ -58,7 +58,7 @@ class Form extends Component {
           // data-email="mfs.specquiz@gmail.com"
           action="https://script.google.com/macros/s/AKfycbw9-aOIHxBMV6Mn4qkJ4cMkES6Gr806D4DlsYhdDnQy7_r4FuUJ/exec"
         >
-          <h6>Help make this quiz better!</h6>
+          <h6 id="form-text">Help make this quiz better!</h6>
           <input
             // value={this.state.specialization}
             id="fuck"

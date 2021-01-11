@@ -9,6 +9,7 @@ const Intro = ({ title, _onStartClick }) => {
           Motherland: Fort Salem
           <br /> Specialization Quiz
         </h1>
+        <div id="intro-container">
         <div className="container">
           <h3 id="intro-text">
             Find out where you belong in this witch's Army!
@@ -25,6 +26,7 @@ const Intro = ({ title, _onStartClick }) => {
             Created by: <br /> MFSRI <br /> Dev. Dep
           </p>
         </article>
+        </div>
       </section>
     </main>
   );

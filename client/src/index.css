@@ -22,7 +22,7 @@ h5,
 .container {
   padding-top: 5px;
   width: 500px;
-  height: 479px;
+  height: 455px;
   background: linear-gradient(to top, transparent, rgb(204, 195, 198, 0.9));
   /* background-color: rgb(204, 195, 198, 0.7); */
 }
@@ -77,6 +77,10 @@ h5,
   margin: auto;
 }
 
+#result-container{
+  padding-top: 10px;
+}
+
 .photo {
   width: 500px;
   height: auto;
@@ -92,6 +96,14 @@ h5,
 }
 .share-icon {
   float: right;
+}
+
+#intro-container{
+  padding-top: 50px;
+}
+
+#tiebreaker-container{
+  padding-top: 18px;
 }
 
 #copied {
@@ -142,10 +154,9 @@ h5,
   font-size: 10px;
 }
 
-form {
+#form {
   padding-top: 30px;
   display: block;
-  /* float: right; */
 }
 
 #thanks {
@@ -154,7 +165,11 @@ form {
   display: none;
 }
 
-#input {
+#form-text{
+  text-align: center;
+}
+
+#fuck {
   width: 350px;
 }
 
