@@ -30,7 +30,7 @@ function AnswerOption(props) {
         value={props.answerType}
         disabled={props.answer}
         onChange={props.onAnswerSelected}
-        onclick="move()"
+        // onClick={move()}
       />
       <label
         className="btn btn-secondary radioCustomLabel answers-btn"

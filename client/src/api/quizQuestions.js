@@ -22,27 +22,27 @@ const quizQuestions = [
       },
     ],
   },
-  {
-    question: "Choose a weapon:",
-    answers: [
-      {
-        type: "Necro",
-        content: "Throwing Knives",
-      },
-      {
-        type: "Fixer",
-        content: "Quarterstaff",
-      },
-      {
-        type: "Blaster",
-        content: "Longsword",
-      },
-      {
-        type: "Knower",
-        content: "Bow and Arrow",
-      },
-    ],
-  },
+  // {
+  //   question: "Choose a weapon:",
+  //   answers: [
+  //     {
+  //       type: "Necro",
+  //       content: "Throwing Knives",
+  //     },
+  //     {
+  //       type: "Fixer",
+  //       content: "Quarterstaff",
+  //     },
+  //     {
+  //       type: "Blaster",
+  //       content: "Longsword",
+  //     },
+  //     {
+  //       type: "Knower",
+  //       content: "Bow and Arrow",
+  //     },
+  //   ],
+  // },
   // {
   //   question: "Are you an Extrovert or an Introvert?",
   //   answers: [
@@ -77,35 +77,35 @@ const quizQuestions = [
   //     },
   //   ],
   // },
-  // {
-  //   question: "You have free time to read a book. What genre do you pick from?",
-  //   answers: [
-  //     {
-  //       type: "Necro, Fixer",
-  //       content: "Romance",
-  //     },
-  //     {
-  //       type: "Necro, Knower",
-  //       content: "Sci-Fi/Fantasy",
-  //     },
-  //     {
-  //       type: "Fixer, Blaster",
-  //       content: "Action/Adventure",
-  //     },
-  //     {
-  //       type: "Blaster, Knower",
-  //       content: "Suspense/Thriller",
-  //     },
-  //     {
-  //       type: "Fixer, Knower",
-  //       content: "Poetry",
-  //     },
-  //     {
-  //       type: "Necro, Blaster",
-  //       content: "Horror/Mystery",
-  //     },
-  //   ],
-  // },
+  {
+    question: "You have free time to read a book. What genre do you pick from?",
+    answers: [
+      {
+        type: "Necro, Fixer",
+        content: "Romance",
+      },
+      {
+        type: "Necro, Knower",
+        content: "Sci-Fi/Fantasy",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Action/Adventure",
+      },
+      {
+        type: "Blaster, Knower",
+        content: "Suspense/Thriller",
+      },
+      {
+        type: "Fixer, Knower",
+        content: "Poetry",
+      },
+      {
+        type: "Necro, Blaster",
+        content: "Horror/Mystery",
+      },
+    ],
+  },
   // {
   //   // IMAGES?
   //   question: "If you were to have an Animal Form, which would it be?",
@@ -218,27 +218,27 @@ const quizQuestions = [
   //     },
   //   ],
   // },
-  // {
-  //   question: "You’re planning a roadtrip with your friends. You are the one who...",
-  //   answers: [
-  //     {
-  //       type: "Necro",
-  //       content: "Brings the snacks and the music. Casts your vote whenever it’s needed",
-  //     },
-  //     {
-  //       type: "Fixer",
-  //       content: "Worries about the travel plans that someone else made. You’re basically the backup planner",
-  //     },
-  //     {
-  //       type: "Blaster",
-  //       content: "Had nothing to do with the planning (thankfully!). Probably drives the most",
-  //     },
-  //     {
-  //       type: "Knower",
-  //       content: "Makes the itinerary and does most of the planning",
-  //     },
-  //   ],
-  // },
+  {
+    question: "You’re planning a roadtrip with your friends. You are the one who...",
+    answers: [
+      {
+        type: "Necro",
+        content: "Brings the snacks and the music. Casts your vote whenever it’s needed",
+      },
+      {
+        type: "Fixer",
+        content: "Worries about the travel plans that someone else made. You’re basically the backup planner",
+      },
+      {
+        type: "Blaster",
+        content: "Had nothing to do with the planning (thankfully!). Probably drives the most",
+      },
+      {
+        type: "Knower",
+        content: "Makes the itinerary and does most of the planning",
+      },
+    ],
+  },
   // {
   //   question: "What do you do to relax after a stressful day?",
   //   answers: [

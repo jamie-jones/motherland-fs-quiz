@@ -1,3 +1,4 @@
+// import fs from "fs";
 import Result from "./components/Result";
 import quizQuestions from "./api/quizQuestions";
 import tieBreakerQues from "./api/tieBreakerQues";
@@ -5,11 +6,13 @@ import Quiz from "./components/Quiz";
 import Intro from "./components/Intro";
 import React, { Component } from "react";
 import "./index.css";
+import "./mobilecss.css";
 import "./App.css";
 import TieBreaker from "./components/tieBreaker/TieBreaker";
 import LogoWhite from "./assets/MFSRI_logo_white.png";
-import "./components/Form";
 import "./components/QuestionCount";
+import Form from "./components/Form";
+// import raw from "./components/TextFile/TextFile.txt";
 
 let currentStat = 1;
 let resultStorage = [];
@@ -21,18 +24,40 @@ function move() {
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("progress-bar");
-    console.log(width)
+    console.log(width);
     var id = setInterval(frame, 10);
     function frame() {
       if (width < 100) {
         i = 0;
-        width+=5.9;
+        width += 5.9;
         elem.style.width = width + "%";
         clearInterval(id);
+      }
     }
   }
 }
-}
+
+// const textFile = require("fs");
+// textFile.readFile("TextFile.txt", (error, txtString) => {
+//   if (error) throw err;
+//   console.log(txtString.toString());
+// });
+
+// fetch(raw)
+//   .then((r) => r.text())
+//   .then((text) => {
+//     console.log("text decoded: ", text);
+//   });
+
+// function writeToFile(fileName, data) {
+//   fs.writeFile(fileName, data, function (err) {
+//     if (err) {
+//       throw err;
+//     }
+//   });
+// }
+
+// writeToFile("./components/TextFile/TextFile.txt", "banana");
 
 class App extends Component {
   constructor(props) {
@@ -54,6 +79,7 @@ class App extends Component {
       tbAnswer: "",
       tbAnswersCount: {},
       tbResult: "",
+      spec: "",
     };
     this._onStartClick = this._onStartClick.bind(this);
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -107,7 +133,6 @@ class App extends Component {
 
     return array;
   }
-  
 
   // this function does two things...
   handleAnswerSelected(event) {
@@ -221,6 +246,7 @@ class App extends Component {
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
+        counter={this.state.counter}
         questionTotal={quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
@@ -258,8 +284,17 @@ class App extends Component {
     );
   }
 
+  renderForm() {
+    return <Form list={answerList} spec={this.state.spec} />;
+  }
+
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+    return (
+      <div>
+        <Result quizResult={this.state.result} />
+        <Form />;
+      </div>
+    );
   }
 
   // here, we render the first things being displayed (the welcome and the beginning on the quiz)
@@ -268,14 +303,17 @@ class App extends Component {
     if (startQuiz) {
       return (
         <main className="content">
-          <section className="quiz">
+          <section className="quiz-container">
             <h1 className="quiz-title">
               Motherland: Fort Salem
               <br /> Specialization Quiz
             </h1>
             <br />
             <article id="logo">
-              <a href="https://mfs-research-institute.tumblr.com/" target="_blank">
+              <a
+                href="https://mfs-research-institute.tumblr.com/"
+                target="_blank"
+              >
                 <img id="ri-logo" src={LogoWhite} alt="MFSRI Logo" />
               </a>
               <p id="created-by">
@@ -299,4 +337,5 @@ class App extends Component {
 }
 // this.state.result ? this.renderResult() : this.renderQuiz()
 // {this.state.result.length > 1 ?  }
+export {answerList};
 export default App;

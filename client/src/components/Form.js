@@ -1,21 +1,46 @@
+import emailjs from "emailjs-com";
+// import { init } from "emailjs-com";
+import { answerList } from "../App"
 import React, { Component } from "react";
-import "../App";
+
+// init("user_CWmtr0BqWI9x70iuHAbAq");
 
 class Form extends Component {
-  state = {
-    specialization: "",
-  };
+  constructor(props) {
+    super(props);
 
-  TextFile = () => {
-    const element = document.createElement("a");
-    const file = new Blob([document.getElementById("input").value], {
-      type: "text/plain;charset=utf-8",
+    this.state = {
+      spec: "",
+      list: answerList
+    };
+  }
+
+  sendMessage(event) {
+    event.preventDefault();
+
+    const templateParams = {
+      list: answerList,
+      spec: this.state.spec,
+    };
+    console.log(templateParams);
+    console.log(this.state.spec);
+
+    emailjs.send("gmail", "template_zecjqzx", templateParams).then(
+      function (response) {
+        alert("Your message has successfully sent!", {});
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (err) {
+        console.log(err);
+        alert("Your message was not able to be sent");
+      }
+    );
+
+    this.setState({
+      list: answerList,
+      spec: "",
     });
-    element.href = URL.createObjectURL(file);
-    element.download = "myFile.txt";
-    document.body.appendChild(element);
-    element.click();
-  };
+  }
 
   formGone = () => {
     var disappear = document.getElementsById("form");
@@ -28,47 +53,34 @@ class Form extends Component {
   };
 
   handleInputChange = (event) => {
-    const { name, value } = event.target;
-
-    this.setState({
-      [name]: value,
-    });
-  };
-
-  handleFormSubmit = (event) => {
     event.preventDefault();
-    console.log("button click");
+    const target = event.target;
+    const name = target.name;
+    const value = target.value;
 
-    // this.TextFile();
-
-    // this.formGone();
-
-    this.setState({
-      specialization: "",
-    });
+    this.setState({ [name]: value });
   };
 
   render() {
     return (
       <div>
         <form
-          id="form"
-          className="gform"
-          method="POST"
-          // data-email="mfs.specquiz@gmail.com"
-          action="https://script.google.com/macros/s/AKfycbw9-aOIHxBMV6Mn4qkJ4cMkES6Gr806D4DlsYhdDnQy7_r4FuUJ/exec"
+          id={this.props.id}
+          name={this.props.name}
+          method={this.props.method}
+          action={this.props.action}
         >
           <h6 id="form-text">Help make this quiz better!</h6>
           <input
-            // value={this.state.specialization}
-            id="fuck"
-            name="fuck"
-            onChange={this.handleInputChange}
+            id="spec"
+            name="spec"
+            onChange={this.handleInputChange.bind(this)}
             type="text"
+            value={this.state.spec}
+            maxlength="10"
             placeholder="What did you think you were?"
           />
-          {/* <input id="answers" name="answers" value={this.filteredOptions} /> */}
-          <button onClick={this.handleFormSubmit} id="submit-form">
+          <button onClick={this.sendMessage.bind(this)} id="submit-form">
             Submit
           </button>
         </form>

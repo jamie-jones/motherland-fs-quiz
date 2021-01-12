@@ -13,12 +13,12 @@ function Result(props) {
     return (
       <div>
         <div className="photo-container">
-          <h6 id="you-got">You got:</h6>
+          <h6>You got:</h6>
           <img className="photo" src={NecroBadge} alt="NecroBadge" />
         </div>
         <div id="result-container">
           <main className="container">
-            <p>
+            <p className="descrip">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -29,7 +29,7 @@ function Result(props) {
             </p>
             <Share />
             <br />
-            <Form />
+            {/* <Form /> */}
           </main>
         </div>
       </div>
@@ -38,12 +38,12 @@ function Result(props) {
     return (
       <div>
         <div className="photo-container">
-          <h6 id="you-got">You got:</h6>
+          <h6>You got:</h6>
           <img className="photo" src={FixerBadge} alt="FixerBadge" />
         </div>
         <div id="result-container">
         <main className="container">
-          <p>
+          <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -54,7 +54,7 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          <Form />
+          {/* <Form /> */}
         </main>
         </div>
       </div>
@@ -63,12 +63,12 @@ function Result(props) {
     return (
       <div>
         <div className="photo-container">
-          <h6 id="you-got">You got:</h6>
+          <h6>You got:</h6>
           <img className="photo" src={BlasterBadge} alt="BlasterBadge" />
         </div>
         <div id="result-container">
         <main className="container">
-          <p>
+          <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -79,7 +79,7 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          <Form />
+          {/* <Form /> */}
         </main>
         </div>
       </div>
@@ -88,12 +88,12 @@ function Result(props) {
     return (
       <div>
         <div className="photo-container">
-          <h6 id="you-got">You got:</h6>
+          <h6>You got:</h6>
           <img className="photo" src={KnowerBadge} alt="KnowerBadge" />
         </div>
         <div id="result-container">
         <main className="container">
-          <p>
+          <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -104,7 +104,7 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          <Form />
+          {/* <Form /> */}
         </main>
         </div>
       </div>

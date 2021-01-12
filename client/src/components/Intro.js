@@ -4,7 +4,7 @@ import LogoWhite from "../assets/MFSRI_logo_white.png"
 const Intro = ({ title, _onStartClick }) => {
   return (
     <main className="content">
-      <section className="quiz">
+      <section className="quiz-container">
         <h1 className="quiz-title">
           Motherland: Fort Salem
           <br /> Specialization Quiz
