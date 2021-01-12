@@ -146,8 +146,9 @@ h5,
   font-size: 10px;
 }
 
-#form {
-  padding-top: 30px;
+form {
+  /* width:500px; */
+  margin: auto;
   display: block;
 }
 

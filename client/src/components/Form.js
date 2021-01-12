@@ -1,9 +1,9 @@
 import emailjs from "emailjs-com";
-// import { init } from "emailjs-com";
+import { init } from "emailjs-com";
 import { answerList } from "../App"
 import React, { Component } from "react";
 
-// init("user_CWmtr0BqWI9x70iuHAbAq");
+init("user_CWmtr0BqWI9x70iuHAbAq");
 
 class Form extends Component {
   constructor(props) {
@@ -72,7 +72,7 @@ class Form extends Component {
         >
           <h6 id="form-text">Help make this quiz better!</h6>
           <input
-            id="spec"
+            id="spec fuck"
             name="spec"
             onChange={this.handleInputChange.bind(this)}
             type="text"

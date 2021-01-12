@@ -37,28 +37,6 @@ function move() {
   }
 }
 
-// const textFile = require("fs");
-// textFile.readFile("TextFile.txt", (error, txtString) => {
-//   if (error) throw err;
-//   console.log(txtString.toString());
-// });
-
-// fetch(raw)
-//   .then((r) => r.text())
-//   .then((text) => {
-//     console.log("text decoded: ", text);
-//   });
-
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, data, function (err) {
-//     if (err) {
-//       throw err;
-//     }
-//   });
-// }
-
-// writeToFile("./components/TextFile/TextFile.txt", "banana");
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -326,9 +304,6 @@ class App extends Component {
             ? this.renderTieBreaker()
             : console.log("it's not 2")}
           {currentStat === 3 ? this.renderResult() : console.log("it's not 3")}
-
-          {/* {!this.state.result && noTieYet ? this.renderQuiz() : console.log(this.state.result)} */}
-          {/* {this.state.result ? this.renderResult() : this.renderTieBreaker()} */}
         </main>
       );
     }
