@@ -5,7 +5,6 @@ import NecroBadge from "../assets/necro.png";
 import FixerBadge from "../assets/fixer.png";
 import KnowerBadge from "../assets/knower.png";
 import Share from "./ShareBtn";
-import Form from "./Form";
 
 // this function actually shows the results in HTML form, calling the propTypes quizResult
 function Result(props) {
@@ -17,7 +16,7 @@ function Result(props) {
           <img className="photo" src={NecroBadge} alt="NecroBadge" />
         </div>
         <div id="result-container">
-          <main className="container">
+          <main className="r-container">
             <p className="descrip">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -29,7 +28,6 @@ function Result(props) {
             </p>
             <Share />
             <br />
-            {/* <Form /> */}
           </main>
         </div>
       </div>
@@ -42,7 +40,7 @@ function Result(props) {
           <img className="photo" src={FixerBadge} alt="FixerBadge" />
         </div>
         <div id="result-container">
-        <main className="container">
+        <main className="r-container">
           <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -54,7 +52,6 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          {/* <Form /> */}
         </main>
         </div>
       </div>
@@ -67,7 +64,7 @@ function Result(props) {
           <img className="photo" src={BlasterBadge} alt="BlasterBadge" />
         </div>
         <div id="result-container">
-        <main className="container">
+        <main className="r-container">
           <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -79,7 +76,6 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          {/* <Form /> */}
         </main>
         </div>
       </div>
@@ -92,7 +88,7 @@ function Result(props) {
           <img className="photo" src={KnowerBadge} alt="KnowerBadge" />
         </div>
         <div id="result-container">
-        <main className="container">
+        <main className="r-container">
           <p className="descrip">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -104,7 +100,6 @@ function Result(props) {
           </p>
           <Share />
           <br />
-          {/* <Form /> */}
         </main>
         </div>
       </div>

@@ -1,7 +1,8 @@
 body {
   background-image: url(./assets/background-image.png);
+  align-items: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,16 @@ h5,
   padding-top: 5px;
   width: 500px;
   height: 455px;
-  background: linear-gradient(to top, transparent, rgb(204, 195, 198, 0.9));
+  background: linear-gradient(to top, transparent,rgb(9, 32, 48, 0.9));
+  /* background-color: rgb(204, 195, 198, 0.7); */
+}
+
+.r-container{
+  padding-top: 5px;
+  width: 500px;
+  height: 250px;
+  margin: auto;
+  background: linear-gradient(to top, transparent, rgb(9,32,48, 0.9));
   /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
@@ -52,7 +62,7 @@ h5,
 .answers-btn {
   width: 420px;
   height: 60px;
-  margin: 3px;
+  margin: 6px;
   text-align: center;
   justify-content: center;
   display: inline-flex;
@@ -65,13 +75,13 @@ h5,
   align-items: center;
 }
 
-.results-section {
+/* .r-container {
   padding-top: 20px;
-  width: 550px;
-  height: 450px;
-  background-color: rgb(204, 195, 198, 0.7);
+  width: 500px;
+  height: 300px;
+  background-color: linear-gradient(to top, transparent rgb(204, 195, 198, 0.7));
   text-align: center;
-}
+} */
 
 .photo-container {
   width: 500px;
@@ -88,12 +98,12 @@ h5,
 }
 
 .share {
-  color: rgb(73, 79, 85);
+  color: rgb(174,165,170);
   float: right;
 }
 
 .share:hover {
-  color: rgb(47, 48, 46);
+  color: rgb(148, 144, 146);
 }
 
 .share-icon {
@@ -146,10 +156,15 @@ h5,
   font-size: 10px;
 }
 
-form {
-  /* width:500px; */
-  margin: auto;
+#display-form{
   display: block;
+}
+
+.form {
+  width:500px;
+  margin: auto;
+  background: linear-gradient(to bottom, transparent,rgb(9, 32, 48));
+  padding-bottom: 20px;
 }
 
 #thanks {
@@ -162,12 +177,16 @@ form {
   text-align: center;
 }
 
-#fuck {
+#spec {
   width: 350px;
 }
 
 #answers {
   display: none;
+}
+
+.descrip { 
+  padding: 10px
 }
 
 #submit-form {
@@ -185,7 +204,7 @@ form {
 #logo {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
 }
 
 #ri-logo {

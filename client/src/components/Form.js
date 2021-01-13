@@ -1,9 +1,19 @@
 import emailjs from "emailjs-com";
 import { init } from "emailjs-com";
-import { answerList } from "../App"
+import { answerList } from "../App";
 import React, { Component } from "react";
 
 init("user_CWmtr0BqWI9x70iuHAbAq");
+
+// function formGone() {
+//   var y = document.getElementsByClassName("form");
+//   var z = document.getElementById("thanks");
+
+//   // if (disappear.style.display === "block") {
+//   y.style.display = "none";
+//   z.style.display = "block";
+//   // }
+// }
 
 class Form extends Component {
   constructor(props) {
@@ -11,12 +21,16 @@ class Form extends Component {
 
     this.state = {
       spec: "",
-      list: answerList
+      list: answerList,
     };
   }
 
   sendMessage(event) {
     event.preventDefault();
+    // formGone();
+
+    var y = document.getElementById("display-form");
+    var z = document.getElementById("thanks");
 
     const templateParams = {
       list: answerList,
@@ -27,12 +41,16 @@ class Form extends Component {
 
     emailjs.send("gmail", "template_zecjqzx", templateParams).then(
       function (response) {
-        alert("Your message has successfully sent!", {});
+        // alert("Your message has successfully sent!", {});
         console.log("SUCCESS!", response.status, response.text);
+        y.style.display = "none";
+        z.style.display = "block";
       },
       function (err) {
         console.log(err);
-        alert("Your message was not able to be sent");
+        y.style.display = "none";
+        z.style.display = "block";
+        // alert("Your message was not able to be sent");
       }
     );
 
@@ -41,16 +59,6 @@ class Form extends Component {
       spec: "",
     });
   }
-
-  formGone = () => {
-    var disappear = document.getElementsById("form");
-    var thanks = document.getElementById("thanks");
-
-    if (disappear.style.display === "block") {
-      disappear.style.display = "none";
-      thanks.style.display = "block";
-    }
-  };
 
   handleInputChange = (event) => {
     event.preventDefault();
@@ -64,26 +72,29 @@ class Form extends Component {
   render() {
     return (
       <div>
-        <form
-          id={this.props.id}
-          name={this.props.name}
-          method={this.props.method}
-          action={this.props.action}
-        >
-          <h6 id="form-text">Help make this quiz better!</h6>
-          <input
-            id="spec fuck"
-            name="spec"
-            onChange={this.handleInputChange.bind(this)}
-            type="text"
-            value={this.state.spec}
-            maxlength="10"
-            placeholder="What did you think you were?"
-          />
-          <button onClick={this.sendMessage.bind(this)} id="submit-form">
-            Submit
-          </button>
-        </form>
+        <div id="display-form">
+          <form
+            className="form"
+            id={this.props.id}
+            name={this.props.name}
+            method={this.props.method}
+            action={this.props.action}
+          >
+            <h6 id="form-text">Help make this quiz better!</h6>
+            <input
+              id="spec"
+              name="spec"
+              onChange={this.handleInputChange.bind(this)}
+              type="text"
+              value={this.state.spec}
+              maxlength="10"
+              placeholder="What did you think you were?"
+            />
+            <button onClick={this.sendMessage.bind(this)} id="submit-form">
+              Submit
+            </button>
+          </form>
+        </div>
         <h6 id="thanks">Thanks!</h6>
       </div>
     );

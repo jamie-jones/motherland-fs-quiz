@@ -20,7 +20,7 @@ class ShareBtn extends Component {
         <CopyToClipboard text={url}>
           <a className="share" onClick={this.copiedURL}>
             <div id="copied">URL Copied!</div>
-            <i className="fas fa-2x fa-share-alt-square share-icon"></i>
+            <i className="fas fa-3x fa-share-alt-square share-icon"></i>
           </a>
         </CopyToClipboard>
       </div>

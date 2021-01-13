@@ -2,7 +2,7 @@
   body {
     background-image: url(./assets/mobile-background.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
     display: flex;
   }
@@ -48,9 +48,9 @@
     font-size: 25px;
   }
 
-  .results-section {
-    width: 600px;
-    height: 600px;
+  .r-container {
+    width: 800px;
+    height: 500px;
   }
 
   .photo-container {
@@ -70,14 +70,28 @@
     font-size: 30px;
   }
 
+  #copied {
+    font-size: small;
+  }
+
   #form-text {
     font-size: 25px;
     float: left;
   }
 
-  #fuck {
-    width: 450px;
+  .form {
+    width: 800px;
   }
+
+  /* #spec {
+    width: 500px;
+    height: 35px;
+  }
+  
+  #submit-form {
+    width: 125px;
+    height: 35px;
+  } */
 
   #logo {
     width: 100px;
@@ -149,17 +163,23 @@
     height: auto;
   }
 
+  .r-container {
+    width: 600px;
+    height: 300px;
+  }
+
   .descrip {
     font-size: 20px;
   }
+
 
   #form-text {
     font-size: 20px;
     text-align: center;
   }
 
-  #fuck {
-    width: 400px;
+  .form {
+    width: 600px;
   }
 }
 
@@ -170,6 +190,7 @@
 
   .container {
     width: 375px;
+    left: 10;
   }
 
   #intro-text {
@@ -213,6 +234,11 @@
     height: auto;
   }
 
+  .r-container {
+    width: 375px;
+    height: 300px;
+  }
+
   .descrip {
     font-size: 15px;
   }
@@ -222,8 +248,13 @@
     text-align: center;
   }
 
-  #fuck {
+  .form {
+    width: 375px;;
+  }
+
+  #spec{
     width: 250px;
+    /* height: 25px; */
   }
 
   #logo {
@@ -283,8 +314,8 @@
     text-align: center;
   }
 
-  #fuck {
-    width: 250px;
+  .form {
+    width: 350px;
   }
 }
 
@@ -330,9 +361,9 @@
     font-size: 15px;
   }
 
-  .results-section {
+  .r-container {
     width: 300px;
-    height: 500px;
+    height: 375px;
   }
 
   .photo-container {
@@ -354,8 +385,8 @@
     text-align: center;
   }
 
-  #fuck {
-    width: 250px;
+  .form {
+    width: 300px;
   }
 
   #logo {
@@ -394,7 +425,7 @@
   }
 
   .answers-btn {
-    background-color: rgb(111, 9, 18);
+    /* background-color: rgb(111, 9, 18); */
     height: 70px;
     font-size: 15px;
   }
@@ -434,7 +465,6 @@
     width: 200px;
   }
 
-
   .question {
     width: 250px;
     height: 75px;
@@ -447,10 +477,9 @@
     font-size: 13px;
   }
 
-
-  .results-section {
+  .r-container {
     width: 250px;
-    height: 500px;
+    height: 450px;
   }
 
   .photo-container {
@@ -463,13 +492,12 @@
     height: auto;
   }
 
-
   #form-text {
     font-size: 15px;
   }
 
-  #fuck {
-    width: 240px;
+  .form {
+    width: 250px;
   }
 
   #logo {

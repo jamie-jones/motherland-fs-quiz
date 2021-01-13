@@ -270,7 +270,7 @@ class App extends Component {
     return (
       <div>
         <Result quizResult={this.state.result} />
-        <Form />;
+        <Form />
       </div>
     );
   }
