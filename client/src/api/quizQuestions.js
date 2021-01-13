@@ -24,7 +24,7 @@ const quizQuestions = [
   },
 
   {
-    question: "Are you an Extrovert or an Introvert?",
+    question: "Extrovert or Introvert?",
     answers: [
       {
         type: "Necro Knower",
@@ -71,27 +71,6 @@ const quizQuestions = [
     ],
   },
   {
-    question: "Who are you in your friend group?",
-    answers: [
-      {
-        type: "Necro",
-        content: "The Loner/Outsider",
-      },
-      {
-        type: "Fixer",
-        content: "The Mom Friend",
-      },
-      {
-        type: "Blaster",
-        content: "The Party Animal",
-      },
-      {
-        type: "Knower",
-        content: "The Planner",
-      },
-    ],
-  },
-  {
     question: "Pick a Greek God:",
     answers: [
       {
@@ -122,6 +101,27 @@ const quizQuestions = [
       {
         type: "Fixer, Blaster",
         content: "Dog",
+      },
+    ],
+  },
+  {
+    question: "Who are you in your friend group?",
+    answers: [
+      {
+        type: "Necro",
+        content: "The Loner/Outsider",
+      },
+      {
+        type: "Fixer",
+        content: "The Mom Friend",
+      },
+      {
+        type: "Blaster",
+        content: "The Party Animal",
+      },
+      {
+        type: "Knower",
+        content: "The Planner",
       },
     ],
   },
@@ -177,6 +177,48 @@ const quizQuestions = [
       {
         type: "Blaster, Knower",
         content: "Yes",
+      },
+    ],
+  },
+  {
+    question: "If you were to have an Animal Form, which would it be?",
+    answers: [
+      {
+        type: "Necro, Knower",
+        content: "Owl",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Wolf",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Bear",
+      },
+      {
+        type: "Necro, Knower",
+        content: "Panther",
+      },
+    ],
+  },
+  {
+    question: "Your favorite extracurricular in high school was?",
+    answers: [
+      {
+        type: "Necro",
+        content: "Something in the arts",
+      },
+      {
+        type: "Fixer",
+        content: "Volunteer work",
+      },
+      {
+        type: "Blaster",
+        content: "Sports",
+      },
+      {
+        type: "Knower",
+        content: "Journalism/YearBook",
       },
     ],
   },
@@ -251,48 +293,6 @@ const quizQuestions = [
       {
         type: "Necro, Blaster",
         content: "Horror/Mystery",
-      },
-    ],
-  },
-  {
-    question: "If you were to have an Animal Form, which would it be?",
-    answers: [
-      {
-        type: "Necro, Knower",
-        content: "Owl",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Wolf",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Bear",
-      },
-      {
-        type: "Necro, Knower",
-        content: "Panther",
-      },
-    ],
-  },
-  {
-    question: "Your favorite extracurricular in high school was?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Something in the arts",
-      },
-      {
-        type: "Fixer",
-        content: "Volunteer work",
-      },
-      {
-        type: "Blaster",
-        content: "Sports",
-      },
-      {
-        type: "Knower",
-        content: "Journalism/YearBook",
       },
     ],
   },
