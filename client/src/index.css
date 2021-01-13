@@ -26,7 +26,6 @@ h5,
   width: 500px;
   height: 455px;
   background: linear-gradient(to top, transparent, rgb(9, 32, 48, 0.9));
-  /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
 .r-container {
@@ -35,7 +34,6 @@ h5,
   height: 300px;
   margin: auto;
   background: rgb(9, 32, 48, 0.7);
-  /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
 .quiz {
@@ -74,14 +72,6 @@ h5,
   justify-content: center;
   align-items: center;
 }
-
-/* .r-container {
-  padding-top: 20px;
-  width: 500px;
-  height: 300px;
-  background-color: linear-gradient(to top, transparent rgb(204, 195, 198, 0.7));
-  text-align: center;
-} */
 
 .photo-container {
   width: 500px;
@@ -148,6 +138,7 @@ h5,
 
 #progress-bar {
   width: 5.9%;
+  background-color:  rgb(9, 32, 48); 
 }
 
 #countdown {
@@ -188,6 +179,7 @@ h5,
 
 .descrip {
   padding: 10px;
+  text-align: center;
 }
 
 #submit-form {

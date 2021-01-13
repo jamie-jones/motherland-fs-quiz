@@ -5,16 +5,6 @@ import React, { Component } from "react";
 
 init("user_CWmtr0BqWI9x70iuHAbAq");
 
-// function formGone() {
-//   var y = document.getElementsByClassName("form");
-//   var z = document.getElementById("thanks");
-
-//   // if (disappear.style.display === "block") {
-//   y.style.display = "none";
-//   z.style.display = "block";
-//   // }
-// }
-
 class Form extends Component {
   constructor(props) {
     super(props);
