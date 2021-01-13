@@ -19,7 +19,7 @@ function Result(props) {
           <main className="r-container">
             <p className="descrip">
               You got Necro! Necros are a curious bunch of witches. Both because
-              they are curious about the world and because they can just be an
+              they are curious about the world and because they can just be
               weird. <i>Sexy-weird</i>, that is. They embrace their weirdness
               and are always looking for a deeper meaning behind the little
               things in life. They value intellect and curiosity but are highly
