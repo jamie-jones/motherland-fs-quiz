@@ -37,19 +37,6 @@ const quizQuestions = [
     ],
   },
   {
-    question: "Would you like to know how or when you die?",
-    answers: [
-      {
-        type: "Necro, Fixer",
-        content: "No",
-      },
-      {
-        type: "Blaster, Knower",
-        content: "Yes",
-      },
-    ],
-  },
-  {
     question: "Pick one:",
     answers: [
       {
@@ -71,27 +58,6 @@ const quizQuestions = [
     ],
   },
   {
-    question: "You are lost in the woods. What do you do?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Observe moss growth patterns and navigate home",
-      },
-      {
-        type: "Fixer",
-        content: "Search for food and water",
-      },
-      {
-        type: "Blaster",
-        content: "Settle in and build a shelter",
-      },
-      {
-        type: "Knower",
-        content: "Venture out further and explore",
-      },
-    ],
-  },
-  {
     question: "Sun or Moon?",
     answers: [
       {
@@ -101,27 +67,6 @@ const quizQuestions = [
       {
         type: "Fixer, Blaster",
         content: "Sun",
-      },
-    ],
-  },
-  {
-    question: "What do you do to relax after a stressful day?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Read a book",
-      },
-      {
-        type: "Fixer",
-        content: "Gardening",
-      },
-      {
-        type: "Blaster",
-        content: "Workout",
-      },
-      {
-        type: "Knower",
-        content: "Meditate",
       },
     ],
   },
@@ -177,6 +122,61 @@ const quizQuestions = [
       {
         type: "Fixer, Blaster",
         content: "Dog",
+      },
+    ],
+  },
+  {
+    question: "You are lost in the woods. What do you do?",
+    answers: [
+      {
+        type: "Necro",
+        content: "Observe moss growth patterns and navigate home",
+      },
+      {
+        type: "Fixer",
+        content: "Search for food and water",
+      },
+      {
+        type: "Blaster",
+        content: "Settle in and build a shelter",
+      },
+      {
+        type: "Knower",
+        content: "Venture out further and explore",
+      },
+    ],
+  },
+  {
+    question: "What do you do to relax after a stressful day?",
+    answers: [
+      {
+        type: "Necro",
+        content: "Read a book",
+      },
+      {
+        type: "Fixer",
+        content: "Gardening",
+      },
+      {
+        type: "Blaster",
+        content: "Workout",
+      },
+      {
+        type: "Knower",
+        content: "Meditate",
+      },
+    ],
+  },
+  {
+    question: "Would you like to know how or when you die?",
+    answers: [
+      {
+        type: "Necro, Fixer",
+        content: "No",
+      },
+      {
+        type: "Blaster, Knower",
+        content: "Yes",
       },
     ],
   },
