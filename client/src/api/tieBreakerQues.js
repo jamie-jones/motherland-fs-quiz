@@ -4,7 +4,7 @@ const tieBreakerQues = [
         answers: [
             {
                 type: "Necro",
-                content: "Perseverance"
+                content: "Endurance"
             },
             {
                 type: "Fixer",

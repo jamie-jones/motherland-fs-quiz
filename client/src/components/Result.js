@@ -20,12 +20,14 @@ function Result(props) {
             <p className="descrip">
               You got Necro! Necros are a curious bunch of witches. Both because
               they are curious about the world and because they can just be an
-              weird. Sexy-weird, that is. They embrace their weirdness and are
-              always looking for a deeper meaning behind the little things in
-              life. They value intellect and curiosity but are highly ambitious
-              and will work hard to achieve their goals, perhaps through
-              somewhat unconventional means at times. While they may be shy at
-              first, once you get to know them, they’re worth the effort.
+              weird. <i>Sexy-weird</i>, that is. They embrace their weirdness
+              and are always looking for a deeper meaning behind the little
+              things in life. They value intellect and curiosity but are highly
+              ambitious and will work hard to achieve their goals, perhaps
+              through somewhat unconventional means at times. But don't get on
+              their bad side. Much like the mushrooms they work with, they can
+              be cute, but <i>deadly</i>. While they may be shy at first, once
+              you get to know them, they’re worth the effort.
             </p>
             <Share />
             <br />
@@ -47,8 +49,12 @@ function Result(props) {
               literally and figuratively, these witches are your go-to. A Fixer
               will put others before themselves and are always willing to help
               support their friends, their neighbors, even that stranger from
-              the other day, simply because it’s right. If you are looking for
-              loyalty, you will have it in a Fixer.
+              the other day, simply because it’s right. Fixers are also creative
+              problem solvers, often thinking outside of the box for ways to
+              work through any obstacle thrown at them. Even if the path is
+              hard, Fixers will work with their sisters to get through it and
+              never leave a fellow witch behind. If you are looking for loyalty,
+              you will have it in a Fixer.
             </p>
             <Share />
             <br />
@@ -69,11 +75,13 @@ function Result(props) {
               You got Blaster! Always the adventurous group, these witches mean
               business and are ready to hit the ground running for whatever life
               brings them next. They may seem serious at times, but at heart
-              they can be big goofballs and will always accept a hug from their
-              closest friends. Blasters are brave and daring, always willing to
-              try new things even if it is outside of their comfort zone. They
-              are that friend who will do anything for you, even if it means
-              getting in trouble.
+              they can be the life of the party and will always accept a hug
+              from their closest friends. Blasters are brave and daring, always
+              willing to try new things even if it is outside of their comfort
+              zone. They are great motivators and often migrate towards
+              leadership roles within any particular group; team captain through
+              and through. They are that friend who will do anything for you,
+              even if it means getting in trouble.
             </p>
             <Share />
             <br />
@@ -97,7 +105,10 @@ function Result(props) {
               caring, and always supportive of their friends. But they are also
               that friend who is funny and joyful at all the right times, when
               your friends need a laugh the most. So by nature, they can be a
-              bit of a goofball.
+              bit of a goofball. However, while they may seem aloof and silly at
+              times, they take their work very seriously and easily master their
+              professions. Knowers are that friend you turn to for advice and a
+              supporting shoulder.
             </p>
             <Share />
             <br />

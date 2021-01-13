@@ -25,16 +25,16 @@ h5,
   padding-top: 5px;
   width: 500px;
   height: 455px;
-  background: linear-gradient(to top, transparent,rgb(9, 32, 48, 0.9));
+  background: linear-gradient(to top, transparent, rgb(9, 32, 48, 0.9));
   /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
-.r-container{
+.r-container {
   padding-top: 5px;
   width: 500px;
-  height: 250px;
+  height: 300px;
   margin: auto;
-  background: linear-gradient(to top, transparent, rgb(9,32,48, 0.9));
+  background: rgb(9, 32, 48, 0.7);
   /* background-color: rgb(204, 195, 198, 0.7); */
 }
 
@@ -98,7 +98,7 @@ h5,
 }
 
 .share {
-  color: rgb(174,165,170);
+  color: rgb(174, 165, 170);
   float: right;
 }
 
@@ -156,14 +156,15 @@ h5,
   font-size: 10px;
 }
 
-#display-form{
+#display-form {
   display: block;
 }
 
 .form {
-  width:500px;
+  width: 500px;
   margin: auto;
-  background: linear-gradient(to bottom, transparent,rgb(9, 32, 48));
+  background-color: rgb(9, 32, 48, 0.7);
+  padding-left: 10px;
   padding-bottom: 20px;
 }
 
@@ -185,8 +186,8 @@ h5,
   display: none;
 }
 
-.descrip { 
-  padding: 10px
+.descrip {
+  padding: 10px;
 }
 
 #submit-form {

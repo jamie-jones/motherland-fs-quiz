@@ -50,7 +50,7 @@
 
   .r-container {
     width: 800px;
-    height: 500px;
+    height: 650px;
   }
 
   .photo-container {
@@ -83,15 +83,10 @@
     width: 800px;
   }
 
-  /* #spec {
-    width: 500px;
-    height: 35px;
+  #spec {
+    width: 550px;
+    /* height: 35px; */
   }
-  
-  #submit-form {
-    width: 125px;
-    height: 35px;
-  } */
 
   #logo {
     width: 100px;
@@ -113,11 +108,6 @@
   .container {
     width: 600px;
     height: 600px;
-  }
-
-  .results-section {
-    width: 600px;
-    height: auto;
   }
 
   .quiz-title {
@@ -165,13 +155,12 @@
 
   .r-container {
     width: 600px;
-    height: 300px;
+    height: 400px;
   }
 
   .descrip {
     font-size: 20px;
   }
-
 
   #form-text {
     font-size: 20px;
@@ -236,7 +225,7 @@
 
   .r-container {
     width: 375px;
-    height: 300px;
+    height: 375px;
   }
 
   .descrip {
@@ -249,10 +238,10 @@
   }
 
   .form {
-    width: 375px;;
+    width: 375px;
   }
 
-  #spec{
+  #spec {
     width: 250px;
     /* height: 25px; */
   }
@@ -363,7 +352,7 @@
 
   .r-container {
     width: 300px;
-    height: 375px;
+    height: 460px;
   }
 
   .photo-container {
@@ -479,7 +468,7 @@
 
   .r-container {
     width: 250px;
-    height: 450px;
+    height: 575px;
   }
 
   .photo-container {
@@ -498,6 +487,7 @@
 
   .form {
     width: 250px;
+    padding-left: 2px;
   }
 
   #logo {

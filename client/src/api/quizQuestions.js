@@ -73,7 +73,7 @@ const quizQuestions = [
       },
       {
         type: "Knower",
-        content: "Inquire with their unit to find out if they’re interested",
+        content: "Ask their unit to find out if they’re interested",
       },
     ],
   },
@@ -168,7 +168,7 @@ const quizQuestions = [
     answers: [
       {
         type: "Necro",
-        content: "Watch and take note of the various new surroundings",
+        content: "Observe moss growth patterns and navigate home",
       },
       {
         type: "Fixer",
