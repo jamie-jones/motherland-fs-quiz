@@ -77,7 +77,7 @@ class Form extends Component {
               onChange={this.handleInputChange.bind(this)}
               type="text"
               value={this.state.spec}
-              maxlength="10"
+              maxlength="50"
               placeholder="What did you think you were?"
             />
             <button onClick={this.sendMessage.bind(this)} id="submit-form">
