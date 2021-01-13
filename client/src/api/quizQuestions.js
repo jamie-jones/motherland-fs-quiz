@@ -1,27 +1,6 @@
-const NecroKnower = ["Necro", "Knower"]
-console.log(NecroKnower)
+const NecroKnower = ["Necro", "Knower"];
+console.log(NecroKnower);
 const quizQuestions = [
-  {
-    question: "There is a software glitch on your computer. How do you fix it?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Get professional help from tech support",
-      },
-      {
-        type: "Fixer",
-        content: "Ask a tech savvy friend for help",
-      },
-      {
-        type: "Blaster",
-        content: "Have you tried turning it off and on again?",
-      },
-      {
-        type: "Knower",
-        content: "Assess it and fix it by yourself",
-      },
-    ],
-  },
   {
     question: "Choose a weapon:",
     answers: [
@@ -43,6 +22,7 @@ const quizQuestions = [
       },
     ],
   },
+
   {
     question: "Are you an Extrovert or an Introvert?",
     answers: [
@@ -53,78 +33,6 @@ const quizQuestions = [
       {
         type: "Fixer Blaster",
         content: "Extrovert",
-      },
-    ],
-  },
-  {
-    question: "You are trying to woo a potential mate! How do you do it?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Write a song or make a playlist and play it for them at their bedroom window",
-      },
-      {
-        type: "Fixer",
-        content: "Get them their favorite breakfast beverage and pastry and leave it for them before first bell",
-      },
-      {
-        type: "Blaster",
-        content: "Make a “Do you like me? Check ‘yes’ or ‘no’” note and send it by parakeet",
-      },
-      {
-        type: "Knower",
-        content: "Ask their unit to find out if they’re interested",
-      },
-    ],
-  },
-  {
-    question: "You have free time to read a book. What genre do you pick from?",
-    answers: [
-      {
-        type: "Necro, Fixer",
-        content: "Romance",
-      },
-      {
-        type: "Necro, Knower",
-        content: "Sci-Fi/Fantasy",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Action/Adventure",
-      },
-      {
-        type: "Blaster, Knower",
-        content: "Suspense/Thriller",
-      },
-      {
-        type: "Fixer, Knower",
-        content: "Poetry",
-      },
-      {
-        type: "Necro, Blaster",
-        content: "Horror/Mystery",
-      },
-    ],
-  },
-  {
-    // IMAGES?
-    question: "If you were to have an Animal Form, which would it be?",
-    answers: [
-      {
-        type: "Necro, Knower",
-        content: "Owl",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Wolf",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Bear",
-      },
-      {
-        type: "Necro, Knower",
-        content: "Panther",
       },
     ],
   },
@@ -142,7 +50,6 @@ const quizQuestions = [
     ],
   },
   {
-    // IMAGES?
     question: "Pick one:",
     answers: [
       {
@@ -198,48 +105,6 @@ const quizQuestions = [
     ],
   },
   {
-    question: "Your favorite extracurricular in high school was?",
-    answers: [
-      {
-        type: "Necro",
-        content: "Something in the arts",
-      },
-      {
-        type: "Fixer",
-        content: "Volunteer work",
-      },
-      {
-        type: "Blaster",
-        content: "Sports",
-      },
-      {
-        type: "Knower",
-        content: "Journalism/YearBook",
-      },
-    ],
-  },
-  {
-    question: "You’re planning a roadtrip with your friends. You are the one who...",
-    answers: [
-      {
-        type: "Necro",
-        content: "Brings the snacks and the music. Casts your vote whenever it’s needed",
-      },
-      {
-        type: "Fixer",
-        content: "Worries about the travel plans that someone else made. You’re basically the backup planner",
-      },
-      {
-        type: "Blaster",
-        content: "Had nothing to do with the planning (thankfully!). Probably drives the most",
-      },
-      {
-        type: "Knower",
-        content: "Makes the itinerary and does most of the planning",
-      },
-    ],
-  },
-  {
     question: "What do you do to relax after a stressful day?",
     answers: [
       {
@@ -282,7 +147,6 @@ const quizQuestions = [
     ],
   },
   {
-    // IMAGES?
     question: "Pick a Greek God:",
     answers: [
       {
@@ -304,7 +168,162 @@ const quizQuestions = [
     ],
   },
   {
-    question: "There is a mysterious wall of fibrous organic material. What do you do?",
+    question: "Dogs or Cats?",
+    answers: [
+      {
+        type: "Necro, Knower",
+        content: "Cat",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Dog",
+      },
+    ],
+  },
+  {
+    question: "There is a software glitch on your computer. How do you fix it?",
+    answers: [
+      {
+        type: "Necro",
+        content: "Get professional help from tech support",
+      },
+      {
+        type: "Fixer",
+        content: "Ask a tech savvy friend for help",
+      },
+      {
+        type: "Blaster",
+        content: "Have you tried turning it off and on again?",
+      },
+      {
+        type: "Knower",
+        content: "Assess it and fix it by yourself",
+      },
+    ],
+  },
+  {
+    question: "You are trying to woo a potential mate! How do you do it?",
+    answers: [
+      {
+        type: "Necro",
+        content:
+          "Write a song or make a playlist and play it for them at their bedroom window",
+      },
+      {
+        type: "Fixer",
+        content:
+          "Get them their favorite breakfast beverage and pastry and leave it for them before first bell",
+      },
+      {
+        type: "Blaster",
+        content:
+          "Make a “Do you like me? Check ‘yes’ or ‘no’” note and send it by parakeet",
+      },
+      {
+        type: "Knower",
+        content: "Ask their unit to find out if they’re interested",
+      },
+    ],
+  },
+  {
+    question: "You have free time to read a book. What genre do you pick from?",
+    answers: [
+      {
+        type: "Necro, Fixer",
+        content: "Romance",
+      },
+      {
+        type: "Necro, Knower",
+        content: "Sci-Fi/Fantasy",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Action/Adventure",
+      },
+      {
+        type: "Blaster, Knower",
+        content: "Suspense/Thriller",
+      },
+      {
+        type: "Fixer, Knower",
+        content: "Poetry",
+      },
+      {
+        type: "Necro, Blaster",
+        content: "Horror/Mystery",
+      },
+    ],
+  },
+  {
+    question: "If you were to have an Animal Form, which would it be?",
+    answers: [
+      {
+        type: "Necro, Knower",
+        content: "Owl",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Wolf",
+      },
+      {
+        type: "Fixer, Blaster",
+        content: "Bear",
+      },
+      {
+        type: "Necro, Knower",
+        content: "Panther",
+      },
+    ],
+  },
+  {
+    question: "Your favorite extracurricular in high school was?",
+    answers: [
+      {
+        type: "Necro",
+        content: "Something in the arts",
+      },
+      {
+        type: "Fixer",
+        content: "Volunteer work",
+      },
+      {
+        type: "Blaster",
+        content: "Sports",
+      },
+      {
+        type: "Knower",
+        content: "Journalism/YearBook",
+      },
+    ],
+  },
+  {
+    question:
+      "You’re planning a roadtrip with your friends. You are the one who...",
+    answers: [
+      {
+        type: "Necro",
+        content:
+          "Brings the snacks and the music. Casts your vote whenever it’s needed",
+      },
+      {
+        type: "Fixer",
+        content:
+          "Worries about the travel plans that someone else made. You’re basically the backup planner",
+      },
+      {
+        type: "Blaster",
+        content:
+          "Had nothing to do with the planning (thankfully!). Probably drives the most",
+      },
+      {
+        type: "Knower",
+        content: "Makes the itinerary and does most of the planning",
+      },
+    ],
+  },
+  {
+    question:
+      "There is a mysterious wall of fibrous organic material. What do you do?",
     answers: [
       {
         type: "Necro",
@@ -321,19 +340,6 @@ const quizQuestions = [
       {
         type: "Knower",
         content: "Try to see into it",
-      },
-    ],
-  },
-  {
-    question: "Dogs or Cats?",
-    answers: [
-      {
-        type: "Necro, Knower",
-        content: "Cat",
-      },
-      {
-        type: "Fixer, Blaster",
-        content: "Dog",
       },
     ],
   },
